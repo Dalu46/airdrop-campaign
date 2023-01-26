@@ -1,8 +1,16 @@
 import React, { useState } from "react";
-import './accordion.css'
+import "./accordion.css";
 
 const Accordion = () => {
-  const [isOpen, setIsOpen] = useState(null);
+  const [selected, setSelected] = useState(null);
+
+  const toggle = i => {
+      if (selected === i) {
+        return setSelected(null);
+      }
+
+      setSelected(i);
+  }
 
   const details = [
     {
@@ -36,26 +44,27 @@ const Accordion = () => {
     },
   ];
 
-  const handleClick = (index) => {
-    console.log(isOpen);
-    setIsOpen(() => index);
-  }
 
 
-  const renderDetails = details.map((detail, index) => {
+  const renderDetails = details.map((detail, i) => {
     return (
-    //   <details onClick={() => handleClick(index)} open={isOpen === index} key={index}>
-    <details key={index}>
-        <summary>{detail.summary}</summary>
-        <p>{detail.response}</p>
-      </details>
+      //   <details onClick={() => handleClick(index)} open={isOpen === index} key={index}>
+      <div className="detail" key={i}>
+        <div className="summary-text" onClick={() => toggle(i)} >
+          <p>{detail.summary}</p>
+        </div>
+        <div className={selected === i ? "response-text show" : "response-text"}>{detail.response}</div>
+      </div>
     );
   });
 
   return (
     <div className="accordion-div">
-      <p>Frenquently Asked Questions</p>
-      <div>{renderDetails}</div>
+      <div className="accordion-wrapper">
+        <p className="faq">Frenquently Asked Questions</p>
+        <p className="general-text">General</p>
+        <div>{renderDetails}</div>
+      </div>
     </div>
   );
 };

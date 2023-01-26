@@ -58,8 +58,8 @@ const DashBoardBody = () => {
           </div>
 
           <div className="social-media-second-block">
-            <SocialMedia />
-            <SocialMedia />
+            <SocialMedia socialMediaName={'instagram'} socialMediaIcon={instagram}/>
+            <SocialMedia socialMediaName={'facebook'} socialMediaIcon={facebook}/>
           </div>
         </div>
 
