@@ -1,0 +1,128 @@
+.crypto {
+    border: 1px solid #f0af03;
+    width: 50%;
+    height: fit-content;
+    background: #FFFFFF;
+    /* border-radius: 12px 12px 0px 0px; */
+}
+
+.mnla-token {
+    background: #f0af03;
+    opacity: 0.7;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* border-radius: 12px 12px 0px 0px; */
+}
+
+.hr-box-crypto {
+    margin: 20px auto 10px auto !important;
+}
+
+.hr-crypto {
+    background: white !important;
+}
+
+.mnla-token-sale {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 56px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.mnla-available {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+.token-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px;
+    background: #FFFFFF;
+}
+
+.token-price-box p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.block-chain {
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.block-chain p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.crypto-text {
+    color: #F0AF03;
+    margin: auto 0;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+}
+
+.followers {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 20px;
+    line-height: 42px;
+}
+
+.ethereum-img {
+    width: 20px;
+}
+
+.ethereum-box {
+    display: flex;
+}
+
+.ethereum-box span {
+    margin: auto 0;
+}
+
+.instructions {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid red; */
+    padding: 10px 40px;
+    margin-bottom: 8px;
+    background: #FFFFFF;
+}
+
+.instructions-btn {
+    padding: 10px 14%;
+    font-family: 'Raleway';
+    border-radius: 6px;
+    border: 1px solid #003DDB;
+    background: #FFFFFF;
+}
+
+.join-campaign {
+    background: #003DDB;
+    color: #FFFFFF;
+}

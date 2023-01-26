@@ -1,0 +1,13 @@
+.register {
+    text-align: center;
+    padding: 7px 17px;
+    color: #ffff;
+    background: var(--login-btn);
+    border: none;
+    border-radius: 8px;
+    margin: auto 0;
+}
+
+.logout-color {
+    background: blue !important;
+}

@@ -1,0 +1,13 @@
+.menu {
+    display: flex;
+    width: 25%;
+    justify-content: space-between;
+    height: 26px;
+    margin: auto 0;
+}
+
+.menu-text {
+    color: #ffff;
+    font-family: Raleway;
+    margin: auto 0;
+}

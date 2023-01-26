@@ -1,0 +1,39 @@
+.home-header {
+    background-color: var(--background-blue);
+    padding-top: 1px;
+}
+
+.manilla-text {
+    font: Raleway;
+    font-weight: 700;
+    text-align: center;
+    line-height: 42px;
+    font-size: 24px;
+    color: #ffff;
+    width: 55%;
+    margin: 150px auto 70px auto;
+}
+
+.manilla-text span {
+    color: #F0AF03;
+}
+
+.hr-box {
+    display: flex;
+    width: 8rem;
+    margin: 60px auto;
+    justify-content: space-between;
+}
+
+.short-hr {
+    width: 10px;
+    height: 7px;
+    background-color: #F0AF03;
+    border: none;
+}
+
+.long-hr {
+    width: 80px;
+    background-color: #F0AF03;
+    border: none;
+}

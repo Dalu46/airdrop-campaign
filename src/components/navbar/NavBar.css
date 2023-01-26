@@ -1,0 +1,22 @@
+.nav-bar {
+    display: flex;
+    padding: 15px 30px 19px 45px;
+    width: 100%;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+    position: fixed;
+    z-index: 2;
+    background: var(--background-blue);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.nav-bar img {
+    width: 200px;
+}
+
+.account-btns {
+    /* border: 1px solid red; */
+    display: flex;
+    width: fit-content;
+    justify-content: space-between;
+}

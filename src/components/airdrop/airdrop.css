@@ -1,0 +1,143 @@
+.count-down {
+    display: flex;
+    color: #ffff;
+    justify-content: space-between;
+}
+
+.air-drop-text {
+    color: #ffff;
+    width: 60%;
+    padding: 30px;
+}
+
+.air-text {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 59px;
+    text-align: center;
+    margin: 0;
+}
+
+.air-drop-box {
+    display: flex;
+    background: linear-gradient(180deg, #000080 0%, #F6C745 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.amount-div {
+    width: 37%;
+    margin-left: 3%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+}
+
+.smnla-text {
+    margin-right: 2rem;
+    color: #B1AEAE;
+    text-align: right;
+    /* margin: auto 0; */
+}
+
+.amount-div p span {
+    color: #ffff;
+}
+
+.static-line {
+    background-color: #ffff;
+    width: 100%;
+    height: 1px;
+    margin: auto 0;
+}
+
+.main-air-drop-container {
+    width: 70%;
+    border: 1px solid #F6C745;
+    border-radius: 12px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+}
+
+.date-box {
+    border: 1px solid #ffff;
+    padding: 3px 10px;
+    width: 100px;
+    text-align: center;
+}
+
+.verify-btn {
+    padding: 12px 80px;
+    width: 100%;
+    margin: 15px auto;
+    background: #071B49;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    color: #ffff;
+}
+
+.date-box-num {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 59px;
+    text-align: center;
+    margin: 2px;
+}
+
+.count-down span {
+    margin: 30px 0;
+}
+
+.count-down span hr {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #F6C745;
+    border: none;
+    margin: 6px 0;
+}
+
+.static-line-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.static-line-circle {
+    width: 8px;
+    height: 8px;
+    background-color: black;
+    border: 5px solid #F6C745;
+    border-radius: 50%;
+    justify-content: right;
+}
+
+.two {
+    background-color: black;
+    border: 5px solid #ffff;
+}
+
+.mnla {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 23px;
+    text-align: right;
+    color: #ffff;
+}
+
+.mnla span {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 23px;
+    margin-right: 1.5rem;
+}
+

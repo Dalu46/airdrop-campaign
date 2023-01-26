@@ -1,0 +1,8 @@
+.login-view {
+    background: url("../../assets/images/bg1.png");
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-color: #ffff;
+    height: 100vh;
+}

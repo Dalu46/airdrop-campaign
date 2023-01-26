@@ -1,0 +1,63 @@
+import React, { useState } from "react";
+import './accordion.css'
+
+const Accordion = () => {
+  const [isOpen, setIsOpen] = useState(null);
+
+  const details = [
+    {
+      summary: "What is the MNLA token?",
+      response:
+        "MNLA is the rocket fuel that powers the whole Manilla Finance Ecosystem. The token boasts of being both a governance and utility token.",
+    },
+    {
+      summary: "What is the Manilla Finance project all about?",
+      response:
+        "Manilla Finance is an innovative & highly scalable project bridging features of conventional fintech services to the blockchain. Through its robust application that will launch in a couple of months, users will be able to pay for a variety of utility bills including Electricity, Airtime/Data, Gift Cards, Hotels, Flight & Event tickets and many more utility that will be added as the ecosystem continues expansion.",
+    },
+    {
+      summary: "What is the benefit of holding the MNLA token?",
+      response:
+        "If you stake the MNLA token for 365 Days, it automatically earn you an equity stake in the project. Which means at the end of the fiscal year, you are eligible to share 40% of the profit generated with other investors who have staked for same duration. You also get 15% APR of MNLA tokens as reward. Staking 365 Days on the Manilla Vault also admits you automatically into the DAO so you can participate in the open governance of the Manilla Finance project and be able to vote to determine the direction and future of the project.",
+    },
+    {
+      summary: "When will AirDroppers be eligible to claim their tokens?",
+      response:
+        "Everyone who qualifies for the AirDrop will be able to claim their tokens 1 month after launch of the token. To qualify, all you have to do is follow our social channels, then refer 5 of your friends to join all our social channels and ensure they do so. Each person is only entitled to join the campaign with a single wallet as multiple wallets entries will be disqualified.",
+    },
+    {
+      summary: "When will the MNLA token launch?",
+      response: "The token was launched last quarter of 2022.",
+    },
+    {
+      summary:
+        "What wallet address should AirDroppers submit for the future claim?",
+      response: "BEP20 wallet address",
+    },
+  ];
+
+  const handleClick = (index) => {
+    console.log(isOpen);
+    setIsOpen(() => index);
+  }
+
+
+  const renderDetails = details.map((detail, index) => {
+    return (
+    //   <details onClick={() => handleClick(index)} open={isOpen === index} key={index}>
+    <details key={index}>
+        <summary>{detail.summary}</summary>
+        <p>{detail.response}</p>
+      </details>
+    );
+  });
+
+  return (
+    <div className="accordion-div">
+      <p>Frenquently Asked Questions</p>
+      <div>{renderDetails}</div>
+    </div>
+  );
+};
+
+export default Accordion;

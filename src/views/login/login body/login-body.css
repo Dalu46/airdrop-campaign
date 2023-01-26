@@ -1,0 +1,308 @@
+.login-div {
+    /* display: flex; */
+    padding-top: 1px;
+    margin: 0 auto;
+    width: fit-content;
+}
+
+input {
+    font-size: 17px;
+    font-family: 'Raleway';
+}
+
+.login-form {
+    border: 1px solid #2A27B0;
+    padding: 30px 60px;
+    border-radius: 20px;
+    background: #FFFFFF;
+    /* width: 80%;
+    max-width: 550px; */
+}
+
+.login-wrapper {
+    margin: 100px 0 0 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-text {
+    font-family: 'Raleway';
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 28px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: #1B289A;
+    margin-bottom: 40px;
+}
+
+.login-icons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-icons span {
+    display: flex;
+    border-radius: 8px;
+    padding: 4px 8px;
+    /* justify-content: space-between; */
+    width: 140px;
+}
+
+.login-icons span img {
+    width: 25px;
+    margin: 0 6px;
+}
+
+.facebook {
+    background: #5856D6;
+}
+.twitter {
+    background: #00BCD4;
+    margin: 0 25px;
+}
+.google {
+    background: #D84226;
+}
+
+.icon-text {
+    text-align: center;
+    font-family: 'Raleway';
+    align-self: center;
+    line-height: 25px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+
+.email-div {
+    display: flex;
+    margin: 30px auto;
+    width: 80%;
+    justify-content: space-between;
+    color: #0000008A;
+    font-family: 'Raleway';
+}
+
+.email-div hr {
+    width: 80px;
+    height: 1px;
+    margin: auto 0;
+}
+
+.input-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-div input {
+    height: 40px;
+    border: none;
+    padding: 2px 17px;
+    margin-bottom: 20px;
+    font-size: 17px;
+    font-family: 'Raleway';
+}
+
+.input-div input:focus {
+    border-color: #9C27B0;
+}
+
+.name::placeholder {
+    opacity: 0.5;
+    font-size: 17px;
+}
+
+.password::placeholder {
+    opacity: 0.5;
+    font-size: 17px;
+    color: #FF6F00;
+}
+
+.name {
+    background: rgba(0, 0, 0, 0.09);
+}
+.password {
+    background: rgba(0, 0, 0, 0.03);
+}
+
+/* for account body  */
+
+.reset-password {
+    display: flex;
+    justify-content: space-between;
+}
+.password-reset {
+    height: 40px;
+    border: none;
+    padding: 2px 17px;
+    margin-bottom: 20px;
+    width: 48%;
+}
+.continue-btn {
+    padding: 10px;
+    width: 25%;
+    background: #2A27B0;
+    border-radius: 6px;
+    font-family: "Raleway";
+    color: #FFFFFF;
+    line-height: 19px;
+    border: none;
+    cursor: pointer;
+}
+
+.checkbox-div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.checkbox-div-span {
+    width: 65% !important;
+}
+
+.checkbox-div span {
+    display: flex;
+    width: 50%;
+}
+.checkbox-div span p {
+    margin-left: 5px;
+    font-family: "Raleway";
+}
+
+input[type=checkbox] {
+    accent-color: orange;
+}
+
+.forgot-password {
+    color: #2A27B0;
+    font-family: 'Raleway';
+}
+
+.continue {
+    padding: 10px;
+    width: 100%;
+    background: #2A27B0;
+    border-radius: 6px;
+    font-family: "Raleway";
+    color: #FFFFFF;
+    line-height: 19px;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    /* width: 400px; */
+}
+
+
+
+.login-img {
+    margin-left: 50px;
+}
+
+.login-img img {
+    width: 300px;
+    margin-top: 110px;
+}
+
+.fill {
+    width: 80px;
+}
+
+.fill-one {
+    position: absolute;
+    right: 0;
+    top: 270px;
+}
+
+.fill-two {
+    position: absolute;
+    left: 0;
+    top: 400px;
+}
+
+
+/* for mail body */
+.mail-text {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 39px;
+}
+
+.buttons-div {
+    margin-top: 110px;
+}
+.buttons-div p {
+    font-family: 'Raleway';
+}
+.back-to-login {
+    font-family: 'Raleway';
+    background: #FFFFFF;
+    color: black;
+    border: 1px solid black;
+}
+
+.check-mail-text {
+    word-break: break-word;
+    width: 400px;
+}
+
+/* for forgot body  */
+.forgot-input-email {
+    height: 40px;
+    width: 100%;
+    border: 1px solid black;
+    padding: 2px 17px;
+    margin: 20px 0 2px 0;
+}
+
+/* for reset body  */
+.success-logo {
+    /* remember to fix this magu magu css  */
+    margin: 0 0 10px 38%;
+    padding: 20px;
+    border-radius: 50%;
+    background: #f5fbf6;
+}
+
+.reset-successfull {
+    text-align: center;
+}
+.success-continue {
+    width: 400px;
+}
+
+/* for forget password body  */
+.reset-password-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.reset-password-div input {
+    height: 40px;
+    border: none;
+    padding: 2px 17px;
+    margin-bottom: 5px;
+}
+
+.buttons-div-two {
+    margin-top: 70px;
+}
+
+.reset-password-input-one {
+    width: 100%;
+}
+.reset-password-input-one input {
+    width: inherit;
+}
+.reset-password-input-two {
+    width: 100%;
+}
+.reset-password-input-two input {
+    width: inherit;
+}
+
+.reset-button-continue {
+    margin-top: 20px;
+}
+
+

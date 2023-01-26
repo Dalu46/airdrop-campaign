@@ -1,0 +1,15 @@
+.home-body {
+    display: flex;
+    padding: 30px 100px;
+    background: #EDF1FF;
+    /* justify-content: space-between; */
+}
+
+.img-div {
+    width: 30%;
+    margin-left: 7%;
+}
+
+.img-div img {
+    width: 120%;
+}

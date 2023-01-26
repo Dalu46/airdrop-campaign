@@ -1,0 +1,70 @@
+.footer {
+    display: flex;
+    padding: 15px 60px 0 80px;
+}
+
+.footer-wrapper {
+    display: flex;
+    justify-content: center;
+    /* justify-content: space-between; */
+}
+
+.mnla-logo-div {
+    /* border: 1px solid red; */
+    width: 30%;
+    padding: 20px;
+}
+
+.mnla-logo-div img {
+    width: 240px;
+}
+
+.intuivite-paragraph {
+    margin: 20px 0 60px 0;
+    letter-spacing: 2px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-size: 13px;
+    line-height: 24px;
+    color: #ffff;
+    word-break: break-word;
+}
+
+.mnla-technologies {
+    color: #ffff;
+}
+
+.social-media-div {
+    width: fit-content;
+    margin-left: 4rem;
+}
+
+.icons-div {
+    /* display: flex; */
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.icons-img {
+    margin: 0 14px 0 14px;
+    border: 1px solid #D48E00;
+    padding: 8px;
+    border-radius: 50%;
+    color: white;
+    fill: #D48E00;
+    width: 50px;
+    background: #D48E00;
+}
+
+.tranlation-text {
+    color: #ffff;
+    border: 1px solid grey;
+    padding: 10px;
+    text-align: center;
+    width: 120px;
+    margin: 20px auto;
+}
+
+.dark-text {
+    color: black;
+}

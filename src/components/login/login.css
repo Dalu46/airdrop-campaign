@@ -1,0 +1,12 @@
+.login {
+    text-align: center;
+    padding: 7px 30px;
+    color: #ffff;
+    background: transparent;
+    border: none;
+    margin: auto 0;
+}
+
+.dark-text {
+    color: black;
+}
