@@ -1,6 +1,7 @@
 .home-header {
     background-color: var(--background-blue);
     padding-top: 1px;
+    height: 100vh;
 }
 
 .manilla-text {

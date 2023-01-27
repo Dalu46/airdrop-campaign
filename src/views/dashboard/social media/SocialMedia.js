@@ -1,11 +1,13 @@
 import React from "react";
 import shape from "../../../assets/images/Shape.svg";
 
+import './social-media.css';
+
 const SocialMedia = ({ socialMediaIcon, socialMediaName }) => {
   const verfied = "Not verrified";
   return (
     <div className="social-media">
-      <div className="verrification-div">
+      <div className="verification-div">
         <img
           className="social-media-image"
           src={socialMediaIcon}
@@ -26,7 +28,7 @@ const SocialMedia = ({ socialMediaIcon, socialMediaName }) => {
       </div>
 
       <div className="connect-buttons-div">
-        <input type="text" className="user-name-input" placeholder={`input ${socialMediaName} username`}/>
+        <input type="text" className="user-name-input" placeholder={`Input ${socialMediaName} username`}/>
         <button>Verify</button>
       </div>
     </div>

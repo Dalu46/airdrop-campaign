@@ -14,14 +14,14 @@ function App() {
   // max-width: 500px;
   return (
     <div className="App">
-      <Home />
+      {/* <Home /> */}
       {/* <Login /> */}
       {/* <CreateAccount /> */}
       {/* <MailPage /> */}
       {/* <ForgotPassword /> */}
       {/* <ResetPassword /> */}
       {/* <ResetForgottenPassword /> */}
-      {/* <DashBoard /> */}
+      <DashBoard />
     </div>
   );
 }

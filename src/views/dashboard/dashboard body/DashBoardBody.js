@@ -7,6 +7,9 @@ import twitter from '../../../assets/icons/icons8-twitter (1).svg';
 import telegram from '../../../assets/icons/icons8-telegram-app.svg';
 import instagram from '../../../assets/icons/icons8-instagram (1).svg';
 import facebook from '../../../assets/icons/icons8-facebook-f (1).svg';
+import ProfileBox from "../profile box/ProfileBox";
+
+import './dash-board-body.css';
 
 const DashBoardBody = () => {
   const name = "Usman";
@@ -23,10 +26,10 @@ const DashBoardBody = () => {
           <p className="welcome-text">Were glad to have you here</p>
 
           <div className="user-image-div">
-            <img src={image} alt="user face" />
+            <img src={image} alt="user face" className="user-photo" />
 
             <div className="user-profile-picture-div">
-              <p>{userName}</p>
+              <p className="user-name">{userName}</p>
               <p>Change picture</p>
             </div>
           </div>
@@ -43,27 +46,33 @@ const DashBoardBody = () => {
 
           <div className="refferals-code-div">
             <p className="refferals-num">REFERRALS : {numberOfRefferals}</p>
-            <p className="refferals-code">REFFERALS CODE : {refferalCode}</p>
+            <p className="refferals-num">REFFERALS CODE : {refferalCode}</p>
           </div>
 
-          <button>Copy referral link</button>
+          <button className="copy-btn">Copy referral link</button>
         </div>
       </div>
 
       <div className="connect-with-socials">
+        <div className="connect-with-socials connect-text-box">
+          <p className="connect-text">Connect with our Socials</p>
+          <p className="follow-us-text">Verify your account by following us on social media</p>
+        </div>
         <div className="connect-div">
           <div className="social-media-first-block">
-            <SocialMedia socialMediaName={'twitter'} socialMediaIcon={twitter} />
-            <SocialMedia socialMediaName={'telegram'} socialMediaIcon={telegram} />
+            <SocialMedia socialMediaName={'Twitter'} socialMediaIcon={twitter} />
+            <SocialMedia socialMediaName={'Telegram'} socialMediaIcon={telegram} />
           </div>
 
           <div className="social-media-second-block">
-            <SocialMedia socialMediaName={'instagram'} socialMediaIcon={instagram}/>
-            <SocialMedia socialMediaName={'facebook'} socialMediaIcon={facebook}/>
+            <SocialMedia socialMediaName={'Instagram'} socialMediaIcon={instagram}/>
+            <SocialMedia socialMediaName={'Facebook'} socialMediaIcon={facebook}/>
           </div>
         </div>
 
-        <div className="connect-div-two"></div>
+        <div className="connect-div-two">
+          <ProfileBox />
+        </div>
       </div>
     </div>
   );
