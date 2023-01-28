@@ -34,11 +34,26 @@ const Footer = ({ darkText, darkLogo }) => {
 
         <div className="social-media-div">
           <div className="icons-div">
+            <span className="imgs">
             <img className="icons-img" src={facebook} alt="Facebook's logo" />
+            </span>
+
+            <span className="imgs">
             <img className="icons-img" src={linkedin} alt="linkedin's logo" />
+            </span>
+
+            <span className="imgs">
             <img className="icons-img" src={twitter} alt="Twitter's logo" />
+            </span>
+
+            <span className="imgs">
             <img className="icons-img" src={instagram} alt="Instagram's logo" />
+            </span>
+
+            <span className="imgs">
             <img className="icons-img" src={telegram} alt="Telegram's logo" />
+            </span>
+            
           </div>
           <div className="translation">
             <div className="tranlation-text">English</div>

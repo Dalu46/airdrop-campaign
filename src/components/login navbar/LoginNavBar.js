@@ -5,6 +5,7 @@ import Register from "../register/RegisterBtn";
 import LoginBtn from "../login/LoginBtn";
 
 import './login-navbar.css';
+import { Link } from "react-router-dom";
 
 
 const LoginNavBar = ({ logoutInfo, logoutColor, loginInfo }) => {
@@ -14,11 +15,11 @@ const LoginNavBar = ({ logoutInfo, logoutColor, loginInfo }) => {
 
     return (
       <div className="nav-bar login-nav-bar">
-        <img src={Logo} alt="MNLA logo" />
+        <Link to="/"><img src={Logo} alt="MNLA logo" /></Link>
         {/* <Menu /> */}
         <div className="account-btns">
-          <LoginBtn dark={true} loginText={loginText} />
-          <Register logoutText={logoutText} logoutTextColor={logouTextColor} />
+          <Link to="/login">{<LoginBtn dark={true} loginText={loginText} />}</Link>
+          <Link to="/register"><Register logoutText={logoutText} logoutTextColor={logouTextColor} /></Link>
         </div>
       </div>
     );

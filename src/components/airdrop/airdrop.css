@@ -109,17 +109,17 @@
 }
 
 .static-line-circle {
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 11px;
     background-color: black;
-    border: 5px solid #F6C745;
+    border: 2px solid #F6C745;
     border-radius: 50%;
     justify-content: right;
 }
 
 .two {
     background-color: black;
-    border: 5px solid #ffff;
+    border: 2px solid #ffff;
 }
 
 .mnla {

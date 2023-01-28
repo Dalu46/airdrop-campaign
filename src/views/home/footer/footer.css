@@ -40,20 +40,23 @@
 }
 
 .icons-div {
-    /* display: flex; */
-    justify-content: center;
+    display: flex;
+    justify-content: space-between;
     margin-top: 50px;
 }
 
-.icons-img {
-    margin: 0 14px 0 14px;
-    border: 1px solid #D48E00;
-    padding: 8px;
+.imgs {
+    display: flex;
+    justify-content: center;
+    background: orange;
+    width: 40px;
+    margin-left: 20px;
+    height: 40px;
     border-radius: 50%;
-    color: white;
-    fill: #D48E00;
-    width: 50px;
-    background: #D48E00;
+}
+
+.icons-img {
+    width: 60%;
 }
 
 .tranlation-text {

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Logo from "../../assets/icons/Logo.svg";
 import LoginBtn from "../login/LoginBtn";
 import Menu from "../menu/Menu";
@@ -11,8 +12,8 @@ const NavBar = () => {
       <img src={Logo} alt="MNLA logo" />
       <Menu />
       <div className="account-btns">
-        <LoginBtn />
-        <Register />
+        <Link to="/login">{<LoginBtn />}</Link>
+        <Link to="/register">{<Register />}</Link>
       </div>
     </div>
   );

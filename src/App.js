@@ -1,4 +1,5 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
 import CreateAccount from "./views/create account/CreateAccount";
 import DashBoard from "./views/dashboard/DashBoard";
 import ForgotPassword from "./views/forgot password/ForgotPassword";
@@ -13,16 +14,18 @@ function App() {
 
   // max-width: 500px;
   return (
-    <div className="App">
-      {/* <Home /> */}
-      {/* <Login /> */}
-      {/* <CreateAccount /> */}
+    <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<CreateAccount />} />
+      
+    
       {/* <MailPage /> */}
       {/* <ForgotPassword /> */}
       {/* <ResetPassword /> */}
       {/* <ResetForgottenPassword /> */}
-      <DashBoard />
-    </div>
+      {/* <DashBoard /> */}
+    </Routes>
   );
 }
 
