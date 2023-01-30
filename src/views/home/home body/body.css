@@ -52,12 +52,26 @@
 
 @media screen and (max-width: 630px) {
     .img-div img {
-        margin: 0 0 20px -50px;
+        margin: 0 0 20px 8rem;
     }
 }
+
+/* @media screen and (max-width: 545px) {
+    .img-div img {
+        margin-left: 0 0 20px 8rem !important;
+    }
+} */
 
 @media screen and (max-width: 470px) {
     .img-div img {
         width: 230px;
+        margin-left: 6rem;
     }
 }
+
+@media screen and (max-width: 360px) {
+    .img-div img {
+        margin-left: 6rem;
+    }
+}
+
