@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useRef } from "react";
 import "./Menu.css";
 
-const Menu = ({ isMobile }) => {
+const Menu = ({ isVisible, isMobile }) => {
+
+
   const items = ["Home", "Whitepaper", "MNLA Token"];
   const renderedItem = items.map((item, index) => (
     <span>
@@ -13,7 +15,15 @@ const Menu = ({ isMobile }) => {
   ));
 
   return (
-    <div className={isMobile ? "menu-mobile" : "menu"}>{renderedItem}</div>
+    // <div ref={menuRef} className={isMobile ? "menu-mobile" : "menu"}>{renderedItem}</div>
+    <>
+      {
+        isVisible && isMobile ?
+        <div className="menu-mobile">{renderedItem}</div> 
+        :
+        <div className="menu">{renderedItem}</div>
+      }
+    </>
   );
 };
 

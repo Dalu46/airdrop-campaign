@@ -8,7 +8,12 @@ import Menu from "../menu/Menu";
 import Register from "../register/RegisterBtn";
 import "./NavBar.css";
 
-const NavBar = () => {
+const NavBar = ({ show, setShow }) => {
+  const handleClick = () => {
+    setShow(!show);
+    console.log('clicked')
+  }
+
   return (
     <div className="nav-bar">
       <img src={Logo} alt="MNLA logo" />
@@ -16,7 +21,7 @@ const NavBar = () => {
       <div className="account-btns">
         <Link to="/login">{<LoginBtn />}</Link>
         <Link to="/register">{<Register />}</Link>
-        <img src={menuIcon} alt="Menu" className="menu-icon" />
+        <img onClick={ handleClick } src={menuIcon} alt="Menu" className="menu-icon" />
       </div>
     </div>
   );
