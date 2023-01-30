@@ -18,13 +18,11 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<CreateAccount />} />
-      
-    
-      {/* <MailPage /> */}
-      {/* <ForgotPassword /> */}
-      {/* <ResetPassword /> */}
-      {/* <ResetForgottenPassword /> */}
-      {/* <DashBoard /> */}
+        <Route path="/checkmail" element={<MailPage />} />
+        <Route path="/forgotpassword" element={<ForgotPassword />} />
+        <Route path="/resetpassword" element={<ResetPassword />} />
+        <Route path="/resetforgottenpassword" element={<ResetForgottenPassword />} />
+        <Route path="/dashboard" element={<DashBoard />} />
     </Routes>
   );
 }

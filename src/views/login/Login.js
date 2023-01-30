@@ -10,7 +10,7 @@ const Login = () => {
         <div className="login-view">
             <LoginNavBar />
             <LoginBody />
-            <Footer darkText={true} darkLogo={true} />
+            <Footer darkText={true} darkLogo={true} isMobile={true} />
         </div>
 
     )

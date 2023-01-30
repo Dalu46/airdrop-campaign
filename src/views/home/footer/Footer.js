@@ -9,7 +9,7 @@ import linkedin from "../../../assets/icons/icons8-linkedin-2 (1).svg";
 
 import "./footer.css";
 
-const Footer = ({ darkText, darkLogo }) => {
+const Footer = ({ darkText, darkLogo, isMobile }) => {
   // function googleTranslateElementInit() {
   //   new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
   // }
@@ -17,7 +17,7 @@ const Footer = ({ darkText, darkLogo }) => {
   /* <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> */
 
   return (
-    <div className="footer">
+    <div className={`footer ${isMobile && 'mobile-footer'} `}>
       <div className="footer-wrapper">
         <div className="mnla-logo-div">
           {darkLogo ? (

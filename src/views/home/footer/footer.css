@@ -131,4 +131,7 @@
     .icons-div {
         margin-top: 0;
     }
+    .mobile-footer {
+        display: none;
+    }
 }

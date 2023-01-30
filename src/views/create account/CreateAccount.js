@@ -8,7 +8,7 @@ const CreateAccount = () => {
         <div className="login-view">
             <LoginNavBar />
             <AccountBody />
-            <Footer darkText={true} darkLogo={true} />
+            <Footer darkText={true} darkLogo={true} isMobile={true} />
         </div>
     )
 }

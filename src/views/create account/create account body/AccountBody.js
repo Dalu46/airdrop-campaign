@@ -11,8 +11,8 @@ import "../../login/login body/login-body.css";
 const AccountBody = () => {
   return (
     <div className="login-div">
-      <div className="login-wrapper">
-        <div className="login-form">
+      <div className="login-wrapper create-account-wrapper">
+        <div className="login-form create-account-form">
           <form>
             <p className="login-text">Create Your Account</p>
             <div className="login-icons">
@@ -30,10 +30,10 @@ const AccountBody = () => {
               </span>
             </div>
 
-            <div className="email-div">
-              <hr />
-              <p>Or register with email</p>
-              <hr />
+            <div className="email-div register-email-div">
+              <hr className="register-hr" />
+              <p className="register-with-text">Or register with email</p>
+              <hr className="register-hr" />
             </div>
 
             <div className="input-div">
@@ -66,19 +66,19 @@ const AccountBody = () => {
             </div>
 
             <div className="checkbox-div">
-              <span className="checbox-div-span">
+              <span className="checbox-div-span checkbbox-span-register">
                 <input type="checkbox" id="checkbox" className="checkbox" />
-                <p>
+                <p className="i-agree-text">
                   I have read and accept the Terms of Service & Privacy Policy *
                 </p>
               </span>
-              <button className="continue-btn">CONTINUE</button>
+              <button className="continue-btn continue-btn-register">CONTINUE</button>
             </div>
           </form>
         </div>
 
-        <div className="login-img ">
-          <img src={login} alt="login" />
+        <div className="login-img create-account-img">
+          <img src={login} alt="login"  />
         </div>
 
         <img className="fill fill-one" src={fill1} alt="fill" />

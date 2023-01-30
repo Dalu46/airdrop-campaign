@@ -6,3 +6,15 @@
     background-color: #ffff;
     height: 100vh;
 }
+
+@media screen and (max-width: 880px) {
+    .login-view {
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 524px) { 
+    .login-view {
+        height: 100vh;
+    }
+}

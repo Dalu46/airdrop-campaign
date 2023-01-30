@@ -306,3 +306,193 @@ input[type=checkbox] {
 }
 
 
+/* ================================== desktop/tab view for 'create account component' ============================= */
+@media screen and (max-width: 1150px) {
+    .create-account-wrapper {
+        justify-content: center;
+    }
+    
+    .create-account-form {
+        width: 50%;
+        margin-left: 110px;
+    }
+
+    .continue-btn-register {
+        height: fit-content;
+    }
+
+    .checkbbox-span-register {
+        width: 65% !important;
+    }
+}
+
+@media screen and (max-width: 925px) {
+    .register-hr {
+        width: 60px !important;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .create-account-form {
+        width: 80%;
+        margin: 0 auto 20px auto;
+    }
+
+    .create-account-img {
+        margin-left: 170px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .create-account-img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .create-account-form {
+        width: 90%;
+    }
+
+    .i-agree-text {
+        font-size: 14px;
+    }
+
+    .continue-btn-register {
+        line-height: 10px;
+    }
+
+    .register-with-text {
+        font-size: 14px;
+    }
+
+    .register-hr {
+        width: 35px;
+    }
+
+    .register-email-div {
+        width: 100%;
+    }
+
+    .continue-btn-register {
+        padding: 10px 2px;
+        font-size: 13px;
+        width: 28%;
+    }
+
+    .password-reset {
+        padding: 2px;
+        font-size: 6px;
+    }
+}
+
+
+/* =============================== desktop view for login component ================================ */
+@media screen and (max-width: 1110px) {
+    .login-form {
+        padding: 30px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .login-img img {
+        width: 250px;
+    }
+
+    .login-icons span {
+        width: 110px;
+    }
+
+    .login-icons span img {
+        width: 15px;
+        margin: 0 3px;
+
+    }
+    
+    .icon-text {
+        line-height: 20px;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .login-wrapper {
+        flex-direction: column-reverse;
+    }
+
+    .login-img img {
+        margin: 0 0 20px 60px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    .fill {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    .login-form {
+        padding: 20px;
+    }
+
+    .login-text {
+        font-size: 20px;
+        line-height: 10px;
+        margin-bottom: 25px;
+    }
+
+    .img-div {
+        margin: 20px auto;
+    }
+
+    .img-div hr {
+        width: 55px;
+    }
+
+    .icon-text {
+        font-size: 12px;
+    }
+
+    .login-icons span {
+        padding: 4px 2px;
+        width: 90px;
+    }
+
+    .twitter {
+        margin: 0;
+    }
+    
+    .input-div input {
+        margin-bottom: 10px;
+    }
+
+    .continue {
+        font-size: 14px;
+        line-height: 12px;
+    }
+
+    .forgot-password {
+        font-size: 15px;
+    }
+
+    .login-img img {
+        margin-left: 0;
+    }
+
+    .fill-two {
+        top: 300px;
+    }
+
+    .fill-one {
+        top: 200px;
+    }
+
+    /* .login-form {
+        padding: 0;
+    } */
+}
+
+
