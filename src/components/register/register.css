@@ -11,3 +11,10 @@
 .logout-color {
     background: blue !important;
 }
+
+/* ======================= Tab view ==================== */
+@media screen and (max-width: 550px) {
+    .register {
+        padding: 6px 7px;
+    }
+}

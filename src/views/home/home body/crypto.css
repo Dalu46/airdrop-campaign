@@ -126,3 +126,55 @@
     background: #003DDB;
     color: #FFFFFF;
 }
+
+
+@media screen and (max-width: 880px) {
+    .instructions-btn {
+        padding: 10px 8%;
+        font-size: 13px;
+        width: 48%;
+    }
+
+    .crypto {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .mnla-token-sale {
+        font-size: 24px;
+        line-height: 40px;
+    }
+    .mnla-available {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .token-price-box p {
+        font-size: 16px;
+        line-height: 15px;
+    }
+    .block-chain p {
+        margin-top: -10px;
+        font-size: 16px;
+        line-height: 25px;
+    }
+    .followers {
+        margin-top: -20px;
+        font-size: 18px;
+    }
+    .token-price {
+        padding-bottom: 0;
+    }
+    .instructions-btn {
+        padding: 5px;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .instructions {
+        padding: 10px;
+    }
+    .crypto {
+        width: 85%;
+    }
+}

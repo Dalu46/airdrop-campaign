@@ -1,15 +1,20 @@
 import React from "react";
-import './Menu.css'
+import "./Menu.css";
 
-const Menu = () => {
-    const items = ['Home', 'Whitepaper', 'MNLA Token'];
-    const renderedItem = items.map( (item, index) => <p className="menu-text" key={index}>{item}</p> )
+const Menu = ({ isMobile }) => {
+  const items = ["Home", "Whitepaper", "MNLA Token"];
+  const renderedItem = items.map((item, index) => (
+    <span>
+      <p className="menu-text" key={index}>
+        {item}
+      </p>
+      {/* <hr className={isMobile ? "mobile-menu-hr" : "menu-hr"} /> */}
+    </span>
+  ));
 
-    return (
-        <div className="menu">
-            {renderedItem}
-        </div>
-    )
+  return (
+    <div className={isMobile ? "menu-mobile" : "menu"}>{renderedItem}</div>
+  );
 };
 
 export default Menu;

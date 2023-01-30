@@ -69,3 +69,49 @@
     max-height: 999px;
     transition: all 0.5s cubic-bezier(1,0,1,0);
 }
+
+
+
+/* ================== small tab view =================== */
+
+@media screen and (max-width: 800px)  {
+    .summary-text {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .response-text {
+        font-size: 16px;
+    }
+
+    .faq {
+        font-size: 24px;
+    }
+
+}
+
+@media screen and (max-width: 470px) {
+    .summary-text {
+        font-size: 16px;
+    }
+    .response-text {
+        font-size: 15px;
+        line-height: 15px;
+    }
+
+    .faq {
+        font-size: 20px;
+    }
+
+    .general-text {
+        font-size: 24px;
+    }
+
+    .accordion-wrapper {
+        width: 90%;
+    }
+
+    .accordion-div {
+        padding: 10px 0;
+    }
+}

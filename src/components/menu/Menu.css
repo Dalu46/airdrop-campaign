@@ -1,13 +1,45 @@
 .menu {
     display: flex;
-    width: 25%;
+    width: 30%;
     justify-content: space-between;
     height: 26px;
     margin: auto 0;
+    color: #ffff;
 }
 
 .menu-text {
-    color: #ffff;
+    /* color: #ffff; */
     font-family: Raleway;
     margin: auto 0;
+}
+
+.menu-hr {
+    display: none;
+}
+
+
+/* ====================== Desktop View ======================== */
+
+@media screen and (max-width: 880px) {
+    .menu-mobile {
+        padding: 100px 0 20px 40px;
+        height: 250px;
+        display: flex;
+        font-size: 16px;
+        /* font-weight: 600; */
+        color: black;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        justify-content: space-between;
+        /* display: none; */
+    }
+
+    .menu {
+        display: none;
+    }
+
+    /* .menu-hr {
+        display: block;
+    } */
 }

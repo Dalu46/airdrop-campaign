@@ -20,3 +20,38 @@
     width: fit-content;
     justify-content: space-between;
 }
+
+.menu-icon {
+    width: 30px !important;
+    display: none;
+}
+
+
+/* ===================== Tab view ===================== */
+
+@media screen and (max-width: 880px) {
+    .account-btns {
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .nav-bar {
+        padding: 10px 10px;
+    }
+
+    .nav-bar img {
+        width: 150px;
+    }
+
+    .account-btns {
+        gap: 10px;
+    }
+}
+

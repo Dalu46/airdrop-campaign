@@ -10,3 +10,11 @@
 .dark-text {
     color: black;
 }
+
+
+/* ======================= Tab view ==================== */
+@media screen and (max-width: 550px) {
+    .login {
+        padding: 5px;
+    }
+}

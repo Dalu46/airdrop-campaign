@@ -66,7 +66,7 @@
 .date-box {
     border: 1px solid #ffff;
     padding: 3px 10px;
-    width: 100px;
+    width: 20%;
     text-align: center;
 }
 
@@ -141,3 +141,68 @@
     margin-right: 1.5rem;
 }
 
+
+@media screen and (max-width: 880px) {
+    
+    .air-drop-box {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .air-drop-text {
+        width: 100%;
+    }
+
+    .amount-div {
+        width: 50%;
+    }
+    
+    .date-box-num {
+        font-size: 24px;
+    }
+    
+    
+    
+    /* .day {
+        font-size: 10px;
+    }
+    
+    .verify-btn {
+        font-size: 12px;
+        padding: 10px 50px;
+    } */
+}
+
+@media screen and (max-width: 720px) {
+    .day {
+        font-size: 13px;
+    }
+}
+
+
+@media screen and (max-width: 630px) {
+    .day {
+        font-size: 10px;
+    }
+    .amount-div {
+        width: 80%;
+        padding-top: 0;
+    }
+    .verify-btn {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 510px) {
+    .main-air-drop-container {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .main-air-drop-container {
+        width: 95%;
+        padding: 5px;
+    }
+}

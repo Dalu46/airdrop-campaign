@@ -38,3 +38,31 @@
     background-color: #F0AF03;
     border: none;
 }
+
+
+/* ==================== Tab View ====================== */
+
+@media screen and (max-width: 880px) {
+    .manilla-text {
+        font-size: 20px;
+        margin: 90px auto 30px auto;
+    }
+
+    .home-header {
+        height: fit-content;
+    }
+}
+
+
+@media screen and (max-width: 681px) {
+    .manilla-text {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .manilla-text {
+        font-size: 16px;
+        width: 85%;
+    }   
+}

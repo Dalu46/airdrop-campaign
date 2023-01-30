@@ -22,10 +22,44 @@
     font-family: 'Raleway';
     border-radius: 12px;
     font-size: 18px;
+    cursor: pointer;
 }
 .iframe-video {
     height: 400px;
     /* width: 500px; */
     border: none;
     border-radius: 10px;
+}
+
+@media  screen and (max-width: 1200px) {
+    .video-box button {
+        font-size: 16px;
+        padding: 10px 4px;
+    }
+    
+}
+
+/* ==================== Tab View ===================== */
+@media screen and (max-width: 880px) {
+    .video-container {
+        flex-direction: column;
+    }
+
+    .video-box button {
+        margin: 50px auto 0 auto;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .video-box iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    .video-box button {
+        padding: 10px;
+        margin-top: 30px;
+        width: 75%;
+    }
 }
