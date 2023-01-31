@@ -11,7 +11,7 @@ const AirDrop = () => {
     <div className="main-air-drop-container">
       <div className="air-drop-box">
         <div className="air-drop-text">
-          <p className="air-text">Air drop in</p>
+          <p className="air-text">Airdrop Claim Portal Opens In</p>
           <div className="count-down">
             <div className="date-box">
               <p className="date-box-num">{days}</p>

@@ -14,7 +14,7 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 600;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 59px;
     text-align: center;
     margin: 0;
@@ -39,9 +39,8 @@
 
 .smnla-text {
     margin-right: 2rem;
-    color: #B1AEAE;
+    color: white;
     text-align: right;
-    /* margin: auto 0; */
 }
 
 .amount-div p span {
@@ -65,7 +64,7 @@
 
 .date-box {
     border: 1px solid #ffff;
-    padding: 3px 10px;
+    /* padding: 3px 10px; */
     width: 20%;
     text-align: center;
 }
@@ -142,12 +141,23 @@
 }
 
 
+@media screen and (max-width: 1024px) {
+    .air-text {
+        font-size: 20px;
+    }
+}
+
+
 @media screen and (max-width: 880px) {
     
     .air-drop-box {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+
+    .air-text {
+        font-size: 25px;
     }
 
     .air-drop-text {
@@ -178,6 +188,10 @@
     .day {
         font-size: 13px;
     }
+
+    .air-text {
+        font-size: 20px;
+    }
 }
 
 
@@ -194,6 +208,12 @@
     }
 }
 
+@media screen and (max-width: 540px) {
+    .air-text {
+        font-size: 17px;
+    }
+}
+
 @media screen and (max-width: 510px) {
     .main-air-drop-container {
         width: 85%;
@@ -205,4 +225,5 @@
         width: 95%;
         padding: 5px;
     }
+
 }

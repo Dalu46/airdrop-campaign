@@ -63,3 +63,10 @@
         width: 75%;
     }
 }
+
+@media screen and (max-width: 390px) {
+    .video-box button {
+        width: 80%;
+        padding: 8px;
+    }
+}
