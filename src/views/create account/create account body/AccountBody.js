@@ -67,7 +67,7 @@ const AccountBody = () => {
 
             <div className="checkbox-div">
               <span className="checbox-div-span checkbbox-span-register">
-                <input type="checkbox" id="checkbox" className="checkbox" />
+                <input type="checkbox" id="checkbox" className="checkbox register-checkbox" />
                 <p className="i-agree-text">
                   I have read and accept the Terms of Service & Privacy Policy *
                 </p>

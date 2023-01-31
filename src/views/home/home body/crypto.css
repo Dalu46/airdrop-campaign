@@ -7,7 +7,7 @@
 }
 
 .mnla-token {
-    background: #f0af03;
+    background: var(--login-btn);
     opacity: 0.7;
     display: flex;
     align-items: center;

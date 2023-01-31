@@ -305,6 +305,11 @@ input[type=checkbox] {
     margin-top: 20px;
 }
 
+.register-checkbox {
+    width: 40px;
+    height: auto;
+}
+
 
 /* ================================== desktop/tab view for 'create account component' ============================= */
 @media screen and (max-width: 1150px) {
@@ -334,8 +339,8 @@ input[type=checkbox] {
 
 @media screen and (max-width: 880px) {
     .create-account-form {
-        width: 80%;
-        margin: 0 auto 20px auto;
+        width: 80% !important;
+        margin: 0 auto 20px auto !important;
     }
 
     .create-account-img {
@@ -352,7 +357,7 @@ input[type=checkbox] {
 
 @media screen and (max-width: 500px) {
     .create-account-form {
-        width: 90%;
+        width: 90% !important;
     }
 
     .i-agree-text {
@@ -425,6 +430,18 @@ input[type=checkbox] {
         margin: 0 0 20px 60px;
     }
 
+    .login-icons span {
+        padding: 7px 1px;
+        width: 30%;
+        justify-content: center;
+    }
+
+    .icon-text {
+        line-height: 4px;
+        font-size: 15px;
+        padding: 6px;
+    }
+
 }
 
 @media screen and (max-width: 650px) {
@@ -436,6 +453,8 @@ input[type=checkbox] {
 @media screen and (max-width: 545px) {
     .login-form {
         padding: 20px;
+        width: 120%;
+        margin-left: -30px;
     }
 
     .login-text {
@@ -454,11 +473,6 @@ input[type=checkbox] {
 
     .icon-text {
         font-size: 12px;
-    }
-
-    .login-icons span {
-        padding: 4px 2px;
-        width: 90px;
     }
 
     .twitter {
@@ -490,6 +504,13 @@ input[type=checkbox] {
         top: 200px;
     }
 
+    .icon-text {
+        font-size: 11px;
+    }
+
+    .email-div {
+        width: 95%;
+    }
     /* .login-form {
         padding: 0;
     } */
