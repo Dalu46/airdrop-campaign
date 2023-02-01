@@ -1,5 +1,5 @@
 .crypto {
-    border: 1px solid #f0af03;
+    border: 1px solid #d48e00;
     width: 50%;
     height: fit-content;
     background: #FFFFFF;
@@ -7,7 +7,7 @@
 }
 
 .mnla-token {
-    background: var(--login-btn);
+    background: #d48e00;
     opacity: 0.7;
     display: flex;
     align-items: center;
@@ -77,7 +77,7 @@
 }
 
 .crypto-text {
-    color: #F0AF03;
+    color: #d48e00;
     margin: auto 0;
     font-family: 'Raleway';
     font-style: normal;
@@ -95,6 +95,7 @@
 
 .ethereum-img {
     width: 20px;
+    margin-top: 2px;
 }
 
 .ethereum-box {
@@ -120,6 +121,7 @@
     border-radius: 6px;
     border: 1px solid #003DDB;
     background: #FFFFFF;
+    width: 49%;
 }
 
 .join-campaign {
@@ -154,7 +156,7 @@
         line-height: 15px;
     }
     .block-chain p {
-        margin-top: -10px;
+        /* margin-top: -10px; */
         font-size: 16px;
         line-height: 25px;
     }
