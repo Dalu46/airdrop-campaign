@@ -129,6 +129,12 @@
     color: #FFFFFF;
 }
 
+@media screen and (max-width: 932px) {
+    .mnla-token-sale {
+        font-size: 25px;
+    }
+}
+
 
 @media screen and (max-width: 880px) {
     .instructions-btn {
@@ -153,7 +159,7 @@
     }
     .token-price-box p {
         font-size: 16px;
-        line-height: 15px;
+        line-height: 23px;
     }
     .block-chain p {
         /* margin-top: -10px; */

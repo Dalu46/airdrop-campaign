@@ -46,3 +46,10 @@
         display: block;
     } */
 }
+
+@media screen and (max-width: 550px) {
+    .menu-mobile {
+        padding: 70px 0 20px 40px;
+        height: 200px;
+    }
+}

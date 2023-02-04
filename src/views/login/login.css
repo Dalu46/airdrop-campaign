@@ -15,6 +15,6 @@
 
 @media screen and (max-width: 524px) { 
     .login-view {
-        height: 100vh;
+        height: 100%;
     }
 }

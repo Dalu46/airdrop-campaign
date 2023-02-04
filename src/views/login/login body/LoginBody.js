@@ -7,6 +7,7 @@ import fill1 from "../../../assets/images/Fill 1 (1).svg";
 import fill2 from "../../../assets/images/Fill 2.svg";
 
 import "./login-body.css";
+import { Link } from "react-router-dom";
 
 const LoginBody = () => {
   return (
@@ -57,7 +58,7 @@ const LoginBody = () => {
                 <input type="checkbox" id="checkbox" className="checkbox" />
                 <p>Remember</p>
               </span>
-              <p className="forgot-password">Forgot Password?</p>
+              <Link to="/forgotpassword">{<p className="forgot-password">Forgot Password?</p>}</Link>
             </div>
 
             <button className="continue">CONTINUE</button>

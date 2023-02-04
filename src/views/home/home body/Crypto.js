@@ -6,7 +6,7 @@ const Crypto = () => {
   return (
     <div className="crypto">
       <div className="mnla-token">
-        <p className="mnla-token-sale">$MNLA TOKEN SALE</p>
+        <p className="mnla-token-sale">$MNLA Airdrop Allocation</p>
         <p className="mnla-available">2.5 $MNLA Available</p>
 
         <div className="hr-box hr-box-crypto">
