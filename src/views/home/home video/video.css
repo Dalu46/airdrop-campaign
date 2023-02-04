@@ -3,27 +3,33 @@
 }
 
 .video-box iframe {
-    width: 100%;
+    width: 65%;
 }
 
 .video-container {
     margin: 0 auto;
     padding: 6% 6.5%;
     display: flex;
+    justify-content: space-between;
 }
 
-.video-box button {
-    border: 1px solid #D48E00;
-    margin: auto 0 auto 8%;
-    padding: 10px 60px;
-    width: 50%;
+.learn-btn {
+    border: 1px solid #f7a02c;;
+    margin: 50% 0 auto 10%;
+    padding: 10px 45px;
+    width: 100%;
     color: #ffff;
     background: transparent;
     font-family: 'Raleway';
     border-radius: 12px;
     font-size: 18px;
     cursor: pointer;
+    transition: .5s ease;
 }
+.learn-btn:hover {
+    background: #f7a02c;
+}
+
 .iframe-video {
     height: 400px;
     /* width: 500px; */
@@ -32,11 +38,18 @@
 }
 
 @media  screen and (max-width: 1200px) {
-    .video-box button {
+    .learn-btn {
         font-size: 16px;
-        padding: 10px 4px;
+        /* padding: 10px 4px; */
     }
     
+}
+
+@media screen and (max-width: 1030px) {
+    .learn-btn {
+        padding: 10px 30px;
+        font-size: 15px;
+    }
 }
 
 /* ==================== Tab View ===================== */
@@ -45,8 +58,17 @@
         flex-direction: column;
     }
 
-    .video-box button {
+    .learn-btn {
         margin: 50px auto 0 auto;
+    }
+
+    .video-box iframe {
+        width: 100%;
+    }
+
+    .learn-btn {
+        width: 70%;
+        margin-left: 15%;
     }
 }
 
@@ -60,7 +82,7 @@
     .video-box button {
         padding: 10px;
         margin-top: 30px;
-        width: 75%;
+        width: 70%;
     }
 }
 
