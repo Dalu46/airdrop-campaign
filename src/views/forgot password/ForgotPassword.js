@@ -8,7 +8,7 @@ const ForgotPassword = () => {
     <div>
       <LoginNavBar />
       <ForgotBody />
-      <Footer darkLogo={true} darkText={true} />
+      <Footer darkText={true} darkLogo={true} isMobile={true} />
     </div>
   );
 };

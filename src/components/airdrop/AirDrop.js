@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./airdrop.css";
 
 const AirDrop = () => {
@@ -48,19 +49,23 @@ const AirDrop = () => {
               <p className="day">seconds</p>
             </div>
           </div>
-          <button className="verify-btn">REGISTER & GET VERIFIED</button>
+          <Link to="/register">
+            <button className="verify-btn">REGISTER & GET VERIFIED</button>
+          </Link>
         </div>
         <div className="amount-div">
           <p className="smnla-text">
             1 SMNLA <span>= $0.1</span>
           </p>
           <div className="static-line-div">
-          <span className="static-line-circle"/>
-          <hr className="static-line"/>
-          <span className="static-line-circle two"/>
+            <span className="static-line-circle" />
+            <hr className="static-line" />
+            <span className="static-line-circle two" />
           </div>
           <p className="smnla-text">TOKENS AVAILABLE</p>
-          <p className="mnla">MNLA <span>2.5M</span></p>
+          <p className="mnla">
+            MNLA <span>2.5M</span>
+          </p>
         </div>
       </div>
     </div>

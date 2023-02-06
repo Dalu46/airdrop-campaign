@@ -8,7 +8,7 @@ const MailPage = () => {
         <div className="mail-page login-view">
             <LoginNavBar />
             <MailBody />
-            <Footer darkText={true} darkLogo={true} />
+            <Footer darkText={true} darkLogo={true} isMobile={true} />
         </div>
     )
 

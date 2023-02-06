@@ -8,9 +8,17 @@
 }
 
 .menu-text {
-    /* color: #ffff; */
-    font-family: Raleway;
+    font-family: 'Raleway';
     margin: auto 0;
+}
+
+.menu-mobile a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-mobile a:hover {
+    text-decoration: underline;
 }
 
 .menu-hr {
@@ -29,7 +37,7 @@
         /* font-weight: 600; */
         color: black;
         width: 100%;
-        background: white;
+        background: #EDF1FF;
         flex-direction: column;
         justify-content: space-between;
         /* display: none; */

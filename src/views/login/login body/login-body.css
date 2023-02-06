@@ -255,6 +255,81 @@ input[type=checkbox] {
     margin: 20px 0 2px 0;
 }
 
+/* ======= forgot body mobile ========= */
+.forgot-password-mobile {
+    /* border: 1px solid red; */
+    text-align: center;
+    margin: 20px 0;
+    display: none;
+    padding: 0px;
+    width: 140%;
+    margin-left: -50px;
+}
+
+.inputBox {
+    position: relative;
+    width: 90%;
+    margin: 80px auto;
+}
+
+.inputBox input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid blue;
+    background: #FFFFFF;
+    border-radius: 15px;
+    outline: none;
+    font-size: 1em;
+}
+
+.dont-worry-text {
+    margin: 25px 0 -20px 0;
+}
+
+/* .inputBox span {
+    position: absolute;
+    left: 0;
+    padding: 10px;
+    pointer-events: none;
+    color: blue;
+} */
+
+.inputBox span {
+    color: blue;
+    transform: translateX(10px) translateY(-7px);
+    font-size: 0.65em;
+    padding: 0 10px;
+    background: #FFFFFF;
+    position: absolute;
+    left: 0;
+}
+
+.try-another-div {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 30px auto;
+    align-items: center;
+}
+
+.try-another-text {
+    color: blue;
+}
+
+.try-another-div span {
+    display: flex;
+    background: #2F80ED;
+    padding: 8px;
+    border-radius: 15px;
+    justify-content: space-between;
+}
+
+.try-another-div span p {
+    color: #FFFFFF;
+    margin-right: 8px;
+}
+
+
 /* for reset body  */
 .success-logo {
     /* remember to fix this magu magu css  */
@@ -271,7 +346,44 @@ input[type=checkbox] {
     width: 400px;
 }
 
-/* for forget password body  */
+
+/* =============== reset succesfull (mobile) ============= */
+.successful-mobile-div {
+    /* border: 1px solid red; */
+    text-align: center;
+    display: none;
+    margin-top: 60px;
+}
+
+/* .successful-mobile-div p {
+    margin: 30px 0;
+} */
+
+.login-to-acc-text {
+    margin: 30px 0 100px 0;
+}
+
+.login-success-span {
+    display: flex;
+    /* border: 1px solid red; */
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.login-success-span p {
+    margin-right: 10px;
+    color: #2F80ED;
+    font-weight: 500;
+}
+
+.success-wraper {
+    margin-top: 0;
+}
+
+
+/* for reset forgetten password body  */
 .reset-password-div {
     display: flex;
     flex-direction: column;
@@ -309,6 +421,79 @@ input[type=checkbox] {
     width: 40px;
     height: auto;
 }
+
+/* ========================== reset forgotten password mobile====================== */
+.reset-forgotten-password-mobile {
+    width: 95%;
+    background: white;
+    text-align: center;
+    margin: 20px auto;
+    display: none;
+}
+
+.reset-password-btn {
+    padding: 15px;
+    width: 92%;
+    border-radius: 15px;
+    border: none;
+    background: #2F80ED;
+    color: white;
+}
+
+/* ====================== for check mail component ========================= */
+.sent-otp-text {
+    margin: 20px 0 40px 0;
+}
+
+.fill-otp-wrapper {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 0 auto 10px auto;
+}
+
+.fill-otp-wrapper input {
+    width: 20%;
+    font-family: 'Raleway';
+    height: 50px;
+    border: transparent;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    border-bottom: 2px solid blue;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.fill-otp-wrapper input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+    }
+/* Firefox */
+
+.fill-otp-wrapper input[type=number] {
+    -moz-appearance: textfield;
+  }
+
+  .otp-timer {
+    margin-bottom: 20px;
+  }
+
+  .resend-text {
+    font-weight: 700;
+  }
+
+  .resend-otp-text-wrapper {
+    margin-bottom: 20px;
+  }
+
+
+
+
+
+
+
 
 
 /* ================================== desktop/tab view for 'create account component' ============================= */
@@ -520,11 +705,117 @@ input[type=checkbox] {
     } */
 }
 
+/* ======== (forgot body mobile) ========= */
+@media screen and (max-width: 550px) {
+    /* hide desktop view of (forgot password) */
+    .forgot-form {
+        /* display: none; */
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .forgot-img {
+        margin-left: 80px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* display mobile view of (forgot password) */
+    .forgot-password-mobile {
+        display: inline-block;
+    }
+
+    /* /* hide desktop view of (forgot password) */
+    .forgot-form {
+        display: none;
+    }
+
+    .forgot-img {
+        margin-left: 0;
+    }
+}
+
+
+/* ====================== reset successful mobile ================== */
+@media screen and (max-width: 880px) {
+    .success-img {
+        margin: 0 auto;
+    }
+
+    .successful-reset {
+        margin-top: 40px;
+    }
+
+    /* ===================== for reset forgotten password ================ */
+    .reset-forgotten-password img {
+        margin: 0 auto 20px auto;
+    }
+
+}
+
+@media screen and (max-width: 545px) {
+    .successful-reset {
+        width: 110%;
+        margin-left: -23px;
+    }
+
+    .success-continue {
+        margin-right: auto;
+    }
+
+    /* ===================== for reset forgotten password ================ */
+    .reset-forgotten-password {
+        margin-left: -42px;
+    }
+
+    .reset-forgotten-password-img {
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    .successful-reset {
+        display: none;
+    }
+
+    .successful-mobile-div {
+        display: inline-block;
+    }
+
+/* =========================================== */
+    /* for reset forgotten password  */
+    .reset-forgotten-password-mobile {
+        display: inline-block;
+    }
+
+    .reset-forgotten-password-img img {
+        width: 200px !important;
+    }
+
+    .reset-forgotten-password-img {
+        margin: 0 auto;
+    }
+
+    .reset-forgotten-password {
+        display: none;
+    }
+}
+
+/* ============================= reset forgotten password (mobile)  */
+@media screen and (max-width: 410px) {
+    /* .reset-forgotten-password-mobile {
+
+    } */
+
+}
+
 @media screen and (max-width: 525px) {
     .login-form {
         margin-bottom: 30px;
     }
 }
+
 
 @media screen and (max-width: 380px) {
     .login-form {
@@ -536,6 +827,15 @@ input[type=checkbox] {
     .email-div {
         width: 98%;
     }
+
 }
+
+/* ======================== check mail ================= */
+/* @media screen and (max-width: 545px) {
+    .check-mail {
+        margin-left: -41px
+    }
+} */
+
 
 

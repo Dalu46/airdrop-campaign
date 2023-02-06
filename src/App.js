@@ -10,9 +10,7 @@ import ResetForgottenPassword from "./views/reset forgoten password/ResetForgote
 import ResetPassword from "./views/reset password/ResetPassword";
 
 function App() {
-  // width: 80%;
-
-  // max-width: 500px;
+  
   return (
     <Routes>
         <Route path="/" element={<Home />} />
