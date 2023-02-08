@@ -6,6 +6,7 @@ import about from "../../../assets/icons/about-img 1.svg";
 import cancleBtn from "../../../assets/icons/x.svg";
 
 import "./body.css";
+import { Link } from "react-router-dom";
 
 const HomeBody = () => {
   const [modal, setModal] = useState(false);
@@ -28,7 +29,7 @@ const HomeBody = () => {
       </div>
 
     {modal && (
-      <div onClick={toggleInstructionModal} className="overlay">
+      <div  className="overlay">
         <div className={`instruction-popup ${!modal ? 'fade-out' : 'null'}`}>
           <span>
             <p className="instruction-head-text">
@@ -48,8 +49,8 @@ const HomeBody = () => {
           <hr className="instruction-hr" />
 
           <div className="instruction-login-div">
-            <Login instructions={true} />
-            <Register />
+            <Link to='/login'>{<Login instructions={true} />}</Link>
+            <Link to='/register'>{<Register />}</Link> 
           </div>
         </div>
       </div>
