@@ -29,7 +29,7 @@ const Menu = ({ isVisible, isMobile }) => {
         </div>
       ) : (
         <div className="menu">
-          <div className="menu-mobile">
+          {/* <div className="menu-mobile"> */}
             <Link to="/">
               <p className="menu-text">Home</p>
             </Link>
@@ -39,7 +39,7 @@ const Menu = ({ isVisible, isMobile }) => {
             <a href="https://www.manilla.finance/token">
               <p className="menu-text">MNLA Token</p>
             </a>
-          </div>{" "}
+          {/* </div>{" "} */}
         </div>
       )}
     </>

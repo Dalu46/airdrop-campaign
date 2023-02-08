@@ -21,6 +21,15 @@
     text-decoration: underline;
 }
 
+.menu a {
+    text-decoration: none;
+    color: #EDF1FF;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
 .menu-hr {
     display: none;
 }

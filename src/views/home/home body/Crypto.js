@@ -2,7 +2,7 @@ import React from "react";
 import pngegg1 from "../../../assets/icons/pngegg 1.svg";
 import "./crypto.css";
 
-const Crypto = () => {
+const Crypto = ({ toggleModal }) => {
   return (
     <div className="crypto">
       <div className="mnla-token">
@@ -33,7 +33,7 @@ const Crypto = () => {
       </div>
 
       <div className="instructions">
-        <button className="instructions-btn">View Instructions</button>
+        <button onClick={toggleModal} className="instructions-btn">View Instructions</button>
         <button className="instructions-btn join-campaign">Join Campaign</button>
       </div>
     </div>
