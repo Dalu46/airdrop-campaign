@@ -78,7 +78,7 @@
 
 @media screen and (max-width: 532px) {
     .social-media {
-        width: 70%;
+        width: 80%;
         flex: 0 0 auto;
     }
 }
