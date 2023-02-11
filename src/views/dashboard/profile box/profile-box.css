@@ -1,23 +1,25 @@
 .profile-box-container {
     display: flex;
     justify-content: space-between;
-    border: 1px solid red;
 }
 
 .profile {
-    width: 48%;
-    border: 1px solid orange;
+    width: 49%;
 }
 .profile-div {
     margin: 0 0 5px 25px;
-    border: 1px solid green;
     width: fit-content;
 }
 .name-div-wrapper {
     background: #ffff;
+    height: 385px;
     padding: 10px 15px;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .name-div {
@@ -28,13 +30,19 @@
 .name-div p {
     font-family: 'Raleway';
     margin-top: 4px;
+    font-size: 14px;
 }
+.full-name.country-text {
+    font-size: 14px !important;
+    font-weight: 0 !important;
+}
+
 .change-name {
     padding: 2px 4px;
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 16px;
     color: #775DA6;
     border-radius: 6px;
@@ -46,6 +54,7 @@
     border: none;
     margin: 0 0 4px 4px;
     width: 100%;
+    font-size: 13px;
 }
 
 .user-name input:focus {
@@ -54,30 +63,45 @@
 }
 
 .secure-account {
-    border: 1px solid black;
-    padding: 4px;
+    border: none;
+    background: #DCDCDC;
+    border-radius: 5px;
+    padding: 2px;
 }
 
 .secure-account span {
     display: flex;
 }
 
-.enable-authentication-div {
-    display: flex;
+.secure-account-text {
+    margin-left: 6px;
 }
 
-.enable-authentication-text {
-    width: 60%;
+.enable-authenctication-text {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 0;
-    font-size: 5px;
-    line-height: 1opx;
+    width: 70%;
+    font-size: 10px !important;
+    line-height: 14px !important;
     color: #898989 !important;
 }
 
+.enable-authentication-div {
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    justify-content: space-between;
+}
+
 .enable-button {
-    width: 25%;
+    padding: 5px 8px;
+    margin-left: 8px;
+    background: #0061FE;
+    border-radius: 8px;
+    color: white;
+    border: none;
 }
 
 
@@ -101,19 +125,17 @@
 /* |||||||||||||||| */
 
 .overview {
-    width: 48%;
-    border: 1px solid brown;
+    width: 49%;
 }
 .overview-div {
-    margin: 5px 0 5px 10px;
-    border: 1px solid green;
+    margin: 0 0 5px 10px;
     width: fit-content;
 }
 
 .eligibility-container {
     width: 95%;
     padding: 10px;
-    margin: 0 auto;
+    margin: 15px auto;
     background: #eef6f8;
     border-radius: 8px;
 }
@@ -126,7 +148,7 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 600;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 16px;
     margin-bottom: 10px;
 }
@@ -137,14 +159,14 @@
 }
 .number-of-tasks {
     font-family: 'Raleway';
-    font-size: 12px;
+    font-size: 11px;
 }
 
 .eligibility-status {
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 400;
-    font-size: 13px;
+    font-size: 11px;
     line-height: 16px;
     display: flex;
     align-items: center;
@@ -153,6 +175,10 @@
 
 
 /* come back here with paul to center button  */
+.verify-eligibility-div {
+    width: fit-content;
+    margin: 0 auto;
+}
 
 .verify-eligibility-btn {
     margin: 10px auto;
@@ -170,7 +196,7 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 600;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 24px;
     margin-bottom: 5px;
 }
@@ -192,7 +218,7 @@
 
 .facebook-text {
     font-family: 'Raleway';
-    font-size: 18px;
+    font-size: 14px;
     line-height: 24px;
 }
 
@@ -204,3 +230,45 @@
     border: 1px solid #775DA6;
     margin-top: 5px;
 }
+
+
+@media screen and (max-width: 840px) {
+    .follow-us-text {
+        font-size: 11px !important;
+    }
+}
+
+@media screen and (max-width: 532px) {
+    .profile-box-container {
+        flex-direction: column-reverse;
+    }
+
+    .overview {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .profile {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    .overview-div {
+        margin: 0 auto
+    }
+
+    .profile-div {
+        margin: 5px auto;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .profile {
+        width: 95%;
+    }
+
+    .overview {
+        width: 95%;
+    }
+}
+

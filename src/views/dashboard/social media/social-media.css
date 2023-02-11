@@ -13,7 +13,7 @@
 }
 
 .social-media-image {
-    width: 50px;
+    width: 40px;
     border: 1px solid black;
     padding: 5px;
     background: #FEB700;
@@ -29,6 +29,10 @@
     width: 15px;
 }
 
+.verification-div span p {
+    font-size: 14px;
+}
+
 .social-media-name-div {
     display: flex;
     margin-bottom: 5px;
@@ -38,14 +42,14 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 13px;
     line-height: 24px;
     margin-right: 15px;
 }
 .follow-social-media {
     font-family: 'Raleway';
     font-style: normal;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 18px;
 }
 
@@ -67,7 +71,15 @@
     padding: 5px 10px;
     border-radius: 8px;
     width: 66%;
+    font-size: 14px;
     border: 1px solid #898989;
     font-family: "Raleway";
+}
+
+@media screen and (max-width: 532px) {
+    .social-media {
+        width: 70%;
+        flex: 0 0 auto;
+    }
 }
 

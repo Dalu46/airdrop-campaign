@@ -26,6 +26,7 @@ const Menu = ({ isVisible, isMobile }) => {
           <Link to='/resetpassword'><p>reset password successfull</p></Link>
           <Link to='/resetforgottenpassword'><p>reset password</p></Link>
           <Link to='/forgotpassword'><p>forgot password</p></Link>
+          <Link to='/dashboard'>dashboard</Link>
         </div>
       ) : (
         <div className="menu">
