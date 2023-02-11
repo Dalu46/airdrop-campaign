@@ -261,7 +261,7 @@ copy-btn-div {
         flex-wrap: nowrap;
         overflow-x: scroll;
         scroll-behavior: smooth;
-        scroll-snap-type: mandatory;
+        scroll-snap-type: x mandatory;
         gap: 10px;
     }
 
