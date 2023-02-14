@@ -24,15 +24,19 @@ const MailBody = () => {
           <p className="mail-text">Check Your Email</p>
           <p className="check-mail-text">
             We have sent an email with password reset information to
-            n****e@e***e.com.
+            n****e@e***e.com. <span className="resend-text">Resend?</span>
           </p>
 
           <div className="buttons-div">
             <p>Didn’t receive the email? Check spam or promotion folder</p>
-            <button className="continue">Resend Email</button>
-            <button className="continue back-to-login">Back to Login</button>
+            <input className="forgot-input-email" placeholder="Type OTP" alt="otp" />
+            <button className="continue">Back to Login</button>
+            {/* <button className="continue back-to-login">Back to Login</button> */}
           </div>
         </div>
+
+
+        {/* =================== mobile view ==================== */}
 
         <div className="reset-forgotten-password-mobile">
           <p className="mail-text">Check your mail</p>
@@ -59,6 +63,8 @@ const MailBody = () => {
 
           <button className="reset-password-btn">Verify OTP</button>
         </div>
+
+        {/* =================== finished ======================= */}
 
         <div className="login-img reset-forgotten-password-img">
           <img src={email} alt="login" />

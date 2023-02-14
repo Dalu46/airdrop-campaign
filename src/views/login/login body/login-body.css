@@ -379,7 +379,7 @@ input[type=checkbox] {
 }
 
 .success-wraper {
-    margin-top: 0;
+    margin-top: 110px;
 }
 
 
@@ -418,7 +418,7 @@ input[type=checkbox] {
 }
 
 .register-checkbox {
-    width: 40px;
+    width: auto;
     height: auto;
 }
 
