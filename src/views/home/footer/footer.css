@@ -6,12 +6,14 @@
 .footer-wrapper {
     display: flex;
     justify-content: center;
+    width: 75%;
+    padding-left: 10%;
     /* justify-content: space-between; */
 }
 
 .mnla-logo-div {
     /* border: 1px solid red; */
-    width: 30%;
+    width: 100%;
     padding: 20px;
 }
 
@@ -74,47 +76,29 @@
 
 
 
-@media screen and (max-width: 800px) {
-    .icons-img {
-        width: 50%;
-    }
+/* =====================foter for mobile */
 
-    .mnla-logo-div {
-        width: 41%;
-    }
-
-    .intuivite-paragraph {
-        margin: 15px 0 30px 0;
-        font-size: 12px;
-    }
-
-    .mnla-logo-div img {
-        width: 200px;
+@media screen and (max-width: 660px) {
+    .footer-wrapper {
+        width: 100%;
+        padding-left: 0;
     }
 
     .social-media-div {
-        margin-left: 0;
-    }
-
-    .mnla-technologies {
-        font-size: 15px;
-    }
-
-    .footer {
-        padding-left: 30px;
-        padding-right: -5px;
-    }
-
-}
-
-@media screen and (max-width: 590px) {
-    .imgs {
-        width: 35px;
-        height: 35px;
+        margin-left: 2rem;
     }
 
     .mnla-logo-div {
-        width: 200px;
+        padding: 18px 0 10px 0;
+    }
+
+    .footer {
+        padding: 0 110px 0 112px;
+    }
+
+    .imgs {
+        width: 35px;
+        height: 35px;
     }
 }
 
@@ -123,7 +107,8 @@
         flex-direction: column;
     }
     .mnla-logo-div {
-        width: 125%;
+        width: 100%;
+        padding: 0;
     }
     .social-media-div {
         margin: 0 auto;
@@ -133,5 +118,36 @@
     }
     .mobile-footer {
         display: none;
+    }
+
+    .footer {
+        padding: 15px 0;
+    }
+
+    .mnla-logo-div img {
+        width: 200px;
+    }
+
+    .intuivite-paragraph {
+        line-height: 20px;
+        margin-bottom: 25px;
+    }
+
+    .footer {
+        padding: 15px 30px;
+    }
+
+    .mnla-technologies {
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 400PX) {
+    .footer {
+        padding: 10px 20px;
+    }
+
+    .social-media-div {
+        margin-left: 1rem;
     }
 }

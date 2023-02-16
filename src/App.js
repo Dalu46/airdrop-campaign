@@ -8,11 +8,10 @@ import Login from "./views/login/Login";
 import MailPage from "./views/mail page/MailPage";
 import ResetForgottenPassword from "./views/reset forgoten password/ResetForgotenPassword";
 import ResetPassword from "./views/reset password/ResetPassword";
+import SuccessMail from "./views/success mail/SuccessMail";
 
 function App() {
-  // width: 80%;
-
-  // max-width: 500px;
+  
   return (
     <Routes>
         <Route path="/" element={<Home />} />
@@ -23,6 +22,7 @@ function App() {
         <Route path="/resetpassword" element={<ResetPassword />} />
         <Route path="/resetforgottenpassword" element={<ResetForgottenPassword />} />
         <Route path="/dashboard" element={<DashBoard />} />
+        <Route path="/successmail" element={<SuccessMail />} />
     </Routes>
   );
 }

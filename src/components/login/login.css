@@ -5,10 +5,22 @@
     background: transparent;
     border: none;
     margin: auto 0;
+    cursor: pointer;
 }
 
 .dark-text {
     color: black;
+}
+
+.login-instruction {
+    text-align: center;
+    padding: 6px 20px !important;
+    color: #ffff;
+    background: var(--login-btn);
+    border: none;
+    border-radius: 8px;
+    margin: auto 0;
+    cursor: pointer;
 }
 
 

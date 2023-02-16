@@ -15,6 +15,96 @@
     /* margin-top: 20px; */
 }
 
+/* ================= instruction popup ==================== */
+.instruction-popup {
+    padding: 15px;
+    background: #001f3d;
+    color: #ffff;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 3px;
+    max-width: 700px;
+    width: 350px;
+
+    animation: fadeIn .5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ===============fade out instructions popup====================== */
+.fade-out {
+    animation: fadeOut 2s;
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+/* ================================= */
+
+.instruction-popup span {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.instruction-head-text {
+    font-weight: 700;
+    font-size: 16px;
+    margin-right: 13px;
+}
+
+.cancel-btn {
+    cursor: pointer;
+}
+
+.instruction-text {
+    line-height: 25px;
+}
+
+.instruction-login-div {
+    margin-top: 8px;
+    /* width: 57%; */
+    display: flex;
+    margin-left: 53%;
+    justify-content: space-between;
+}
+
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 20;
+    background: rgba(49,49,49,0.8);
+}
+
+
+
+
+/* ======================= desktop view =================== */
+
 @media screen and (max-width: 1190px) {
     .img-div img {
         width: 135%;

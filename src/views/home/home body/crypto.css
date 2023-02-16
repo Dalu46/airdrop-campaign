@@ -122,6 +122,7 @@
     border: 1px solid #003DDB;
     background: #FFFFFF;
     width: 49%;
+    cursor: pointer;
 }
 
 .join-campaign {

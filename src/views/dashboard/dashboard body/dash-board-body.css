@@ -1,6 +1,8 @@
 .dash-board-body {
-    /* padding-top: 1px; */
-    padding: 1px 70px;
+    padding-top: 1px;
+    padding-left: 50px;
+    padding-right: 50px;
+    /* padding: 1px 70px; */
     background: #edf1ff;
     display: flex;
 }
@@ -8,6 +10,7 @@
 .user-div {
     margin: 90px 0 60px 0;
     width: 23%;
+    position: fixed;
 }
 
 .user-profile {
@@ -116,21 +119,23 @@
 }
 
 /* Remeber to center this  */
+copy-btn-div {
+    width: 90%;
+    margin: 0 auto;
+}
 
 .copy-btn {
     padding: 5px 20px;
     border-radius: 8px;
     border: 1px solid #775DA6;
     background: #ffff;
-    width: 170px;
-    margin: 0 auto;
+   width: 100%;
 }
 
 
 .connect-with-socials {
-    margin: 40px 0 5px 100px;
-    border: 1px solid green;
-    width: 65%;
+    margin: 40px 0 5px 30%;
+    /* width: 90%; */
 }
 .scocials-text-div {
     /* margin-left: 0 !important; */
@@ -145,14 +150,14 @@
     font-family: 'Raleway';
     font-style: normal;
     font-weight: 600;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 28px;
     margin-left: 0;
 }
 .follow-us-text {
     font-family: 'Raleway';
     font-style: normal;
-    font-size: 17px;
+    font-size: 14px;
     line-height: 23px;
     color: #898989;
 }
@@ -161,6 +166,7 @@
 
 .social-media-first-block {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 .social-media-second-block {
@@ -168,6 +174,115 @@
     justify-content: space-between;
 }
 
+.social-hr {
+    display: none;
+}
+
 /* .connect-div-two {
     /* border: 1px solid purple; */
 /* }  */
+
+/* ========================= media query for tab =========================== */
+@media screen and (max-width: 850px) {
+    .user-profile {
+        width: 49%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        margin-bottom: 0;
+        height: 255px;
+    }
+
+    .user-div {
+        display: flex;
+        position: inherit;
+        justify-content: space-between;
+        margin-bottom: 0;
+        width: 85%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .refferals-div {
+        width: 49%;
+        height: 255px;
+    }
+
+    .user-image-div {
+        width: 90%;
+    }
+
+    .connect-with-socials {
+        margin: 0 auto 20px auto;
+        width: 87%;
+    }
+
+    .dash-board-body {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .dash-board-body {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .connect-with-socials {
+        width: 97%;
+    }
+
+    .user-div {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 532px) {
+    .user-div {
+        flex-direction: column;
+    }
+
+    .refferals-div {
+        width: 70%;
+        height: fit-content;
+        margin: 10px auto 0 auto;
+    }
+
+    .user-profile {
+        width: 70%;
+        margin: 0 auto;
+    }
+
+    /* ============= set the social media div for mobile ============================ */
+    .social-media-first-block {
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        gap: 10px;
+    }
+
+    .social-hr {
+        display: block;
+        margin-bottom: 10px;
+        background: rgb(194, 159, 159);
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .user-profile {
+        width: 95%;
+        height: fit-content;
+    }
+
+    .refferals-div {
+        width: 95%;
+        height: fit-content;
+        margin-top: -14px;
+    }
+}
+

@@ -50,27 +50,27 @@ const ProfileBox = () => {
 
           <div className="name-div">
             <p className="full-name">Password</p>
-            <button className="change-name" type="password">
+            <button className="change-name">
               Change password
             </button>
           </div>
           <div className="user-name">
-            <input className="full-name" placeholder={`${emailAddress}`} />
+            <input className="full-name" type="password" placeholder="password" />
             <hr className="userName-hr" />
           </div>
 
           <div className="name-div">
             <p className="full-name">Phone</p>
-            <button className="change-name" type="number">
+            <button className="change-name">
               Update
             </button>
           </div>
           <div className="user-name">
-            <input className="full-name" placeholder={`${phone}`} />
+            <input className="full-name" type="number" placeholder={`${phone}`} />
             <hr className="userName-hr" />
 
             <div className="name-div">
-              <p className="full-name">Country</p>
+              <p className="full-name country-text">Country</p>
               <button className="change-name" type="number">
                 Change
               </button>
@@ -87,13 +87,13 @@ const ProfileBox = () => {
                   src={sheild}
                   alt="protect your account"
                 />
-              <p>Secure Your Account</p>
+              <p className="secure-account-text">Secure Your Account</p>
               </span>
               <div className="enable-authentication-div">
                 <p className="enable-authenctication-text">
                   Two-factor authentication adds an extra layer security to your
                   account. To login, in addition you’ll need to provide a 6
-                  digit code. learn more
+                  digit code. <a href="#">learn more</a> 
                 </p>
                 <button className="enable-button">Enable</button>
               </div>
@@ -121,7 +121,9 @@ const ProfileBox = () => {
               </div>
             </div>
 
+            <div className="verify-eligibility-div">
             <button className="verify-eligibility-btn">VERIFY ELIGIBILITY</button>
+            </div>
 
             <div className="tasks-div">
             <p className="tasks">Tasks</p>

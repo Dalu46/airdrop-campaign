@@ -9,10 +9,14 @@ import './login-navbar.css';
 import { Link } from "react-router-dom";
 
 
-const LoginNavBar = ({ logoutInfo, logoutColor, loginInfo }) => {
+const LoginNavBar = ({ logoutInfo, logoutColor, loginInfo, show, setShow }) => {
     const logoutText = logoutInfo;
     const logouTextColor = logoutColor;
     const loginText = loginInfo;
+
+    const handleClick = () => {
+      setShow(!show);
+    }
 
     return (
       <div className="nav-bar login-nav-bar">
@@ -21,7 +25,7 @@ const LoginNavBar = ({ logoutInfo, logoutColor, loginInfo }) => {
         <div className="account-btns">
           <Link to="/login">{<LoginBtn dark={true} loginText={loginText} />}</Link>
           <Link to="/register"><Register logoutText={logoutText} logoutTextColor={logouTextColor} /></Link>
-          <img src={blueMenu} alt="menu" className="menu-icon"/>
+          <img src={blueMenu} alt="menu" className="menu-icon" onClick={ handleClick } />
         </div>
       </div>
     );

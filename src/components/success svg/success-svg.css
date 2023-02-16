@@ -1,6 +1,13 @@
 .success-svg {
     border-radius: 50%;
-    width: 300px;
-    height: 300px;
+    width: 230px;
+    height: 230px;
     margin-top: 90px;
+}
+
+@media screen and (max-width: 880px) {
+    .success-svg {
+        width: 200px;
+        height: 200px;
+    }
 }

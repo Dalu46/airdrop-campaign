@@ -8,7 +8,7 @@ const ResetForgottenPassword = () => {
         <div className="login-view">
             <LoginNavBar />
             <ResetForgotenBody />
-            <Footer darkLogo={true} darkText={true} />
+            <Footer darkLogo={true} darkText={true} isMobile={true} />
         </div>
     )
 }

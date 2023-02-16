@@ -11,7 +11,6 @@ import "./NavBar.css";
 const NavBar = ({ show, setShow }) => {
   const handleClick = () => {
     setShow(!show);
-    console.log('clicked')
   }
 
   return (

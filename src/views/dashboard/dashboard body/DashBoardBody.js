@@ -49,12 +49,15 @@ const DashBoardBody = () => {
             <p className="refferals-num">REFFERALS CODE : {refferalCode}</p>
           </div>
 
+          <div className="copy-btn-div">
           <button className="copy-btn">Copy referral link</button>
+          </div>
+
         </div>
       </div>
 
       <div className="connect-with-socials">
-        <div className="connect-with-socials connect-text-box">
+        <div className=" connect-text-box">
           <p className="connect-text">Connect with our Socials</p>
           <p className="follow-us-text">Verify your account by following us on social media</p>
         </div>
@@ -62,13 +65,14 @@ const DashBoardBody = () => {
           <div className="social-media-first-block">
             <SocialMedia socialMediaName={'Twitter'} socialMediaIcon={twitter} />
             <SocialMedia socialMediaName={'Telegram'} socialMediaIcon={telegram} />
-          </div>
+          {/* </div>
 
-          <div className="social-media-second-block">
+          <div className="social-media-second-block"> */}
             <SocialMedia socialMediaName={'Instagram'} socialMediaIcon={instagram}/>
             <SocialMedia socialMediaName={'Facebook'} socialMediaIcon={facebook}/>
           </div>
         </div>
+        <hr className="social-hr"/>
 
         <div className="connect-div-two">
           <ProfileBox />
