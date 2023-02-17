@@ -253,13 +253,13 @@
         margin: 0 auto;
     }
 
-    .overview-div {
+    /* .overview-div {
         margin: 0 auto
-    }
+    } */
 
-    .profile-div {
+    /* .profile-div {
         margin: 5px auto;
-    }
+    } */
 }
 
 @media screen and (max-width: 480px) {
