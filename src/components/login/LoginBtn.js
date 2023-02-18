@@ -9,7 +9,8 @@ const LoginBtn = ({ dark, loginText, instructions }) => {
         dark ? "dark-text" : instructions ? "login-instruction" : "null"
       }`}
     >
-      {loginText ? "Home" : "Login"}
+      {/* {loginText ? "Home" : "Login"} */}
+      Login
     </button>
   );
 };

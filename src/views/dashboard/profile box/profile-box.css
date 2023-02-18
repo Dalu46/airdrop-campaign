@@ -253,12 +253,8 @@
         margin: 0 auto;
     }
 
-    .overview-div {
-        margin: 0 auto
-    }
-
     .profile-div {
-        margin: 5px auto;
+        margin-left: 10px;
     }
 }
 
