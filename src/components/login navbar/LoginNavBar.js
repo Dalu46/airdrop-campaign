@@ -7,6 +7,7 @@ import blueMenu from "../../assets/icons/menuBlue.svg";
 
 import './login-navbar.css';
 import { Link } from "react-router-dom";
+import Logout from "../logout/Logout";
 
 
 const LoginNavBar = ({ logoutInfo, logoutColor, loginInfo, show, setShow }) => {
@@ -23,8 +24,17 @@ const LoginNavBar = ({ logoutInfo, logoutColor, loginInfo, show, setShow }) => {
         <Link to="/"><img src={Logo} alt="MNLA logo" /></Link>
         {/* <Menu /> */}
         <div className="account-btns">
+        { !logoutText ?
+          <div>
           <Link to="/login">{<LoginBtn dark={true} loginText={loginText} />}</Link>
           <Link to="/register"><Register logoutText={logoutText} logoutTextColor={logouTextColor} /></Link>
+          </div>
+          :
+          <div className="">
+            <Link to="/">{<button className="login dark-text">Home</button>}</Link>
+            <Logout />
+          </div>
+        }
           <img src={blueMenu} alt="menu" className="menu-icon" onClick={ handleClick } />
         </div>
       </div>

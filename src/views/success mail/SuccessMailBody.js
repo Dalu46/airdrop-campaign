@@ -2,12 +2,12 @@ import React, { useEffect, useRef } from "react";
 import fill1 from "../../assets/images/Fill 1 (1).svg";
 import fill2 from "../../assets/images/Fill 2.svg";
 import email from "../../assets/images/forgot password illustration (1).svg";
-import blueArrow from "../../assets/icons/blue-arrow.svg"
+import blueArrow from "../../assets/icons/blue-arrow.svg";
 
 import "../login/login body/login-body.css";
+import { Link } from "react-router-dom";
 
 const SuccessMailBody = () => {
-
   const inputRef = useRef(null);
 
   const otpMinutes = "00";
@@ -24,8 +24,7 @@ const SuccessMailBody = () => {
         <div className="login-form reset-forgotten-password success-mail-div">
           <p className="mail-text">Check Your Email</p>
           <p className="check-mail-text">
-            We have sent an email to
-            n****e@e***e.com.
+            We have sent an email to n****e@e***e.com.
           </p>
 
           <div className="buttons-div">
@@ -35,14 +34,12 @@ const SuccessMailBody = () => {
           </div>
         </div>
 
-
         {/* =================== mobile view ==================== */}
 
         <div className="reset-forgotten-password-mobile success-mail-mobile">
           <p className="mail-text">Check your mail</p>
           <p className="sent-otp-text">
-          We have sent an email to
-            n****e@e***e.com.
+            We have sent an email to n****e@e***e.com.
           </p>
 
           {/* <div className="fill-otp-wrapper">
@@ -56,10 +53,12 @@ const SuccessMailBody = () => {
             Didn’t get Mail? <span className="resend-text">Resend</span>
           </p>
 
-          <span className="login-success-span">
-            <p>Back to Login</p>
-            <img src={blueArrow} alt="login" />
-          </span>
+          <Link to="/login">
+            <span className="login-success-span">
+              <p>Back to Login</p>
+              <img src={blueArrow} alt="login" />
+            </span>
+          </Link>
         </div>
 
         {/* =================== finished ======================= */}
@@ -76,4 +75,3 @@ const SuccessMailBody = () => {
 };
 
 export default SuccessMailBody;
-

@@ -112,6 +112,7 @@
     }
     .social-media-div {
         margin: 0 auto;
+        padding-right: 10px;
     }
     .icons-div {
         margin-top: 0;
@@ -140,6 +141,8 @@
     .mnla-technologies {
         margin-bottom: 15px;
     }
+
+  
 }
 
 @media screen and (max-width: 400PX) {
@@ -147,7 +150,4 @@
         padding: 10px 20px;
     }
 
-    .social-media-div {
-        margin-left: 1rem;
-    }
 }

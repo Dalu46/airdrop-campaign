@@ -134,7 +134,8 @@ input {
 .password-reset {
     height: 40px;
     border: none;
-    padding: 2px 17px;
+    /* padding: 10px 17px; */
+    padding: 15px;
     margin-bottom: 20px;
     width: 48%;
 }
@@ -418,8 +419,9 @@ input[type=checkbox] {
 }
 
 .register-checkbox {
-    width: auto;
-    height: auto;
+    width: 15px;
+    height: 15px;
+    margin: auto;
 }
 
 /* ========================== reset forgotten password mobile====================== */
@@ -436,8 +438,12 @@ input[type=checkbox] {
     width: 92%;
     border-radius: 15px;
     border: none;
-    background: #2F80ED;
+    background: #6e93f7;
     color: white;
+}
+
+.active {
+    background: #2F80ED;
 }
 
 /* ====================== for check mail component ========================= */
@@ -456,9 +462,10 @@ input[type=checkbox] {
     width: 20%;
     font-family: 'Raleway';
     height: 50px;
-    border: transparent;
+    border: none;
     text-align: center;
     font-size: 20px;
+    border-radius: 0;
     font-weight: 700;
     margin-bottom: 15px;
     border-bottom: 2px solid blue;
@@ -573,7 +580,7 @@ input::-webkit-inner-spin-button {
 
     .password-reset {
         padding: 2px;
-        font-size: 6px;
+        font-size: 17px;
     }
 }
 
@@ -808,6 +815,11 @@ input::-webkit-inner-spin-button {
 
     .resend-success-mail {
         margin: 60px 0;
+    }
+
+    .register-checkbox {
+        width: 30px;
+        height: 20px;
     }
 }
 
