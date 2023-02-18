@@ -418,8 +418,9 @@ input[type=checkbox] {
 }
 
 .register-checkbox {
-    width: auto;
-    height: auto;
+    width: 15px;
+    height: 15px;
+    margin: auto;
 }
 
 /* ========================== reset forgotten password mobile====================== */
