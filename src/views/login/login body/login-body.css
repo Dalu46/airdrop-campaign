@@ -134,7 +134,8 @@ input {
 .password-reset {
     height: 40px;
     border: none;
-    padding: 2px 17px;
+    /* padding: 10px 17px; */
+    padding: 15px;
     margin-bottom: 20px;
     width: 48%;
 }
@@ -579,7 +580,7 @@ input::-webkit-inner-spin-button {
 
     .password-reset {
         padding: 2px;
-        font-size: 6px;
+        font-size: 17px;
     }
 }
 
@@ -814,6 +815,11 @@ input::-webkit-inner-spin-button {
 
     .resend-success-mail {
         margin: 60px 0;
+    }
+
+    .register-checkbox {
+        width: 20px;
+        height: 20px;
     }
 }
 
