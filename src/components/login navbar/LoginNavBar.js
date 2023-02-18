@@ -30,7 +30,7 @@ const LoginNavBar = ({ logoutInfo, logoutColor, loginInfo, show, setShow }) => {
           <Link to="/register"><Register logoutText={logoutText} logoutTextColor={logouTextColor} /></Link>
           </div>
           :
-          <div className="account-btns">
+          <div className="">
             <Link to="/">{<button className="login dark-text">Home</button>}</Link>
             <Logout />
           </div>
