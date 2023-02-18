@@ -2,19 +2,57 @@ import React, { useEffect, useRef } from "react";
 import fill1 from "../../../assets/images/Fill 1 (1).svg";
 import fill2 from "../../../assets/images/Fill 2.svg";
 import email from "../../../assets/images/forgot password illustration (1).svg";
-
+import axios from 'axios';
+import {useLocation, useNavigate} from 'react-router-dom';
 import "../../login/login body/login-body.css";
 
 const MailBody = () => {
 
   const inputRef = useRef(null);
-
+  const codeRef = useRef();
+  const codeMobileRef = useRef();
+  const location = useLocation();
+  const navigate = useNavigate();
   const otpMinutes = "00";
   const otpSeconds = "34";
 
+  const verifyEmail = ()=>{
+    console.log(location.state.msg)
+     const data = {
+       email: location.state.msg,
+       code: codeRef.current.value || codeMobileRef.current.value
+    }
+    axios.post('http://localhost:4000/api/verify-account', data)
+    .then((response) => {
+      console.log(response)
+      alert('email verified');
+      navigate('/login')
+    })
+    .catch(function (error) {
+      console.log(error);
+      alert('error')
+    });
+  }
+
+  const resendVerificationCode = ()=>{
+    const data = {
+      email: location.state.msg
+   }
+    axios.post('http://localhost:4000/api/send-verification-code', data)
+    .then((response) => {
+      console.log(response)
+      alert('code sent again');
+    })
+    .catch(function (error) {
+      console.log(error);
+      alert('error')
+    });
+  }
+
+
   useEffect(() => {
     // focus the first input element on page load
-    inputRef.current.focus();
+  //  inputRef.current.focus();
   }, [])
 
   return (
@@ -23,18 +61,18 @@ const MailBody = () => {
         <div className="login-form reset-forgotten-password">
           <p className="mail-text">Check Your Email</p>
           <p className="check-mail-text">
-            We have sent an email with password reset information to
-            n****e@e***e.com. <span className="resend-text">Resend?</span>
+            We have sent an email verification code to
+            {location.state.msg} 
           </p>
 
           <div className="buttons-div">
             <p>Didn’t receive the email? Check spam or promotion folder</p>
-            <input className="forgot-input-email" placeholder="Type OTP" alt="otp" />
-            <button className="continue">Back to Login</button>
+            <input ref={codeRef} className="forgot-input-email" placeholder="Type OTP" alt="otp" />
+            <button onClick={verifyEmail} className="continue">Verify Email</button>
+            <span className="resend-text"> <button onClick={resendVerificationCode} className="continue">Resend</button></span>
             {/* <button className="continue back-to-login">Back to Login</button> */}
           </div>
         </div>
-
 
         {/* =================== mobile view ==================== */}
 
@@ -43,13 +81,14 @@ const MailBody = () => {
           <p className="sent-otp-text">
             We just sent an OTP to your registered email adress
           </p>
-
-          <div className="fill-otp-wrapper">
+          <input ref={codeMobileRef} className="forgot-input-email" placeholder="Type OTP" alt="otp" />
+      
+          {/* <div className="fill-otp-wrapper">
             <input ref={inputRef} type="number" required="required" max="1" />
             <input type="number" required="required" />
             <input type="number" required="required" />
             <input type="number" required="required" />
-          </div>
+          </div> */}
 
           <p className="otp-timer">
             <span>{otpMinutes}</span>
@@ -58,10 +97,10 @@ const MailBody = () => {
           </p>
 
           <p className="resend-otp-text-wrapper">
-            Didn’t get code? <span className="resend-text">Resend</span>
+            Didn’t get code? <span className="resend-text"> <button onClick={resendVerificationCode} className="continue">Resend</button></span>
           </p>
 
-          <button className="reset-password-btn">Verify OTP</button>
+          <button onClick={verifyEmail} className="reset-password-btn">Verify Code</button>
         </div>
 
         {/* =================== finished ======================= */}
