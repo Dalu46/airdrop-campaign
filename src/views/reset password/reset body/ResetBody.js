@@ -16,7 +16,7 @@ const ResetBody = () => {
               src={successIcon}
               alt="password reset successfull"
             />
-            <p className="reset-successfull">Password reset successfully</p>
+            <p className="reset-successfull">Password reset successfull</p>
             <button className="continue success-continue">Login</button>
           </div>
         </div>

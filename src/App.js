@@ -9,6 +9,7 @@ import MailPage from "./views/mail page/MailPage";
 import ResetForgottenPassword from "./views/reset forgoten password/ResetForgotenPassword";
 import ResetPassword from "./views/reset password/ResetPassword";
 import SuccessMail from "./views/success mail/SuccessMail";
+import ProtectedRoute from './utils/protectedRoute';
 
 function App() {
   
@@ -19,9 +20,13 @@ function App() {
         <Route path="/register" element={<CreateAccount />} />
         <Route path="/checkmail" element={<MailPage />} />
         <Route path="/forgotpassword" element={<ForgotPassword />} />
-        <Route path="/resetpassword" element={<ResetPassword />} />
-        <Route path="/resetforgottenpassword" element={<ResetForgottenPassword />} />
-        <Route path="/dashboard" element={<DashBoard />} />
+        <Route path="/resetpasswordsuccess" element={<ResetPassword />} />
+        <Route path="/api/reset-password/:userId/:token" element={<ResetForgottenPassword />} />
+        <Route path="/dashboard" element={
+          <ProtectedRoute>
+        <DashBoard />
+        </ProtectedRoute>
+      }/>
         <Route path="/successmail" element={<SuccessMail />} />
     </Routes>
   );
