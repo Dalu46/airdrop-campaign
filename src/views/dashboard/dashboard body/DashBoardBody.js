@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import image from "../../../assets/images/Image.png";
 import locationLogo from "../../../assets/icons/map-pin.svg";
 import illustration from "../../../assets/images/Illustration (1).svg";
@@ -8,36 +8,31 @@ import telegram from '../../../assets/icons/icons8-telegram-app.svg';
 import instagram from '../../../assets/icons/icons8-instagram (1).svg';
 import facebook from '../../../assets/icons/icons8-facebook-f (1).svg';
 import ProfileBox from "../profile box/ProfileBox";
-
+import {useLocation, useNavigate} from 'react-router-dom';
+import axios from "axios";
 import './dash-board-body.css';
 
 const DashBoardBody = () => {
-  const name = "Usman";
-  const userName = "Usman Danbaba";
-  const location = "Lagos, Nigeria";
+  const location = useLocation();
+  const navigate = useNavigate();
+  const user = location.state.userInfo;
+  console.log(user);
 
-  const numberOfRefferals = 0;
-  const refferalCode = "VD55G3";
   return (
     <div className="dash-board-body">
       <div className="user-div">
         <div className="user-profile">
-          <p className="user-name-text">Hi {name},</p>
+          <p className="user-name-text">Hi {user.name},</p>
           <p className="welcome-text">Were glad to have you here</p>
 
           <div className="user-image-div">
-            <img src={image} alt="user face" className="user-photo" />
 
             <div className="user-profile-picture-div">
-              <p className="user-name">{userName}</p>
-              <p>Change picture</p>
+              <p className="user-name">{user.email}</p>
+            
             </div>
           </div>
           <hr className="user-hr" />
-          <span className="location-span">
-            <img src={locationLogo} alt="location" />
-            <p>{location}</p>
-          </span>
         </div>
 
         <div className="refferals-div">
@@ -45,12 +40,12 @@ const DashBoardBody = () => {
           <p className="refferals-header">REFFERALS</p>
 
           <div className="refferals-code-div">
-            <p className="refferals-num">REFERRALS : {numberOfRefferals}</p>
-            <p className="refferals-num">REFFERALS CODE : {refferalCode}</p>
+            <p className="refferals-num">REFERRALS : {user.referrals}</p>
+            <p className="refferals-num">REFFERALS CODE : {user.referralCode}</p>
           </div>
 
           <div className="copy-btn-div">
-          <button className="copy-btn">Copy referral link</button>
+          <button className="copy-btn">Copy referral Code</button>
           </div>
 
         </div>
@@ -63,19 +58,20 @@ const DashBoardBody = () => {
         </div>
         <div className="connect-div">
           <div className="social-media-first-block">
-            <SocialMedia socialMediaName={'Twitter'} socialMediaIcon={twitter} />
-            <SocialMedia socialMediaName={'Telegram'} socialMediaIcon={telegram} />
+
+          {user.twitterVerified == false? <SocialMedia socialMediaName={'Twitter'} socialMediaIcon={twitter} userInfo={user} />:<div></div>}
+            
+           { user.telegramVerified === false?<SocialMedia socialMediaName={'Telegram'} socialMediaIcon={telegram} userInfo={user} />: <div></div>}
           {/* </div>
 
           <div className="social-media-second-block"> */}
-            <SocialMedia socialMediaName={'Instagram'} socialMediaIcon={instagram}/>
-            <SocialMedia socialMediaName={'Facebook'} socialMediaIcon={facebook}/>
+           { user.instagramVerified === false?<SocialMedia socialMediaName={'Instagram'} socialMediaIcon={instagram} userInfo={user}/>:<div></div>}
           </div>
         </div>
         <hr className="social-hr"/>
 
         <div className="connect-div-two">
-          <ProfileBox />
+          <ProfileBox userInfo={user} />
         </div>
       </div>
     </div>

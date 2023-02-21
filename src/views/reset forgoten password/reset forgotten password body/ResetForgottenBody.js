@@ -4,7 +4,7 @@ import fill2 from "../../../assets/images/Fill 2.svg";
 import forgotPasswordTwo from "../../../assets/images/forgot password illustration.svg";
 import axios from 'axios';
 import "../../login/login body/login-body.css";
-import { useParams} from "react-router-dom";
+import { useParams, useNavigate} from "react-router-dom";
 
 const ResetForgotenBody = () => {
   const {userId, token} = useParams();
@@ -13,7 +13,7 @@ const ResetForgotenBody = () => {
 
   const mpasswordRef = useRef();
   const mcpasswordRef = useRef();
-
+  const navigate = useNavigate();
   const resetPassword= ()=>{
    if (cpasswordRef.current.value || mcpasswordRef.current.value == passwordRef.current.value || mpasswordRef.current.value){
     const data = {
@@ -25,7 +25,8 @@ const ResetForgotenBody = () => {
     axios.post('http://localhost:4000/api/reset-password', data)
     .then((response) => {
       console.log(response)
-    alert('mail sent again');
+    alert('Password has successfully been resetted');
+      navigate('/login');
     })
     .catch(function (error) {
       console.log(error);
@@ -33,7 +34,7 @@ const ResetForgotenBody = () => {
     });
    }
    else {
-    alert('passwords do not match')
+    alert('passwords do not match');
    }
     
   }

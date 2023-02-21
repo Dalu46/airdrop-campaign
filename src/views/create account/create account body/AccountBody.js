@@ -18,27 +18,44 @@ const AccountBody = () => {
 
     event.preventDefault();
 
-    const {name, email, wallet, referral,password,confirmPassword} = formData.current;
+    const {name, email, wallet, terms, referral,password,confirmPassword, instagram, telegram, twitter} = formData.current;
+    if (name.value === "" || email.value === "" ||wallet.value === "" ||
+    password.value === "" || confirmPassword.value === "" || instagram.value === "" || telegram.value === ""
+     || twitter.value === ""){
+      alert("Missing Form Input Parameters");
+     }
+     else if (terms.checked === false) {
+      alert("Please accept our terms and conditions")
+     }
 
-    const data = {
-      name: name.value,
-      email: email.value,
-      walletAddress: wallet.value,
-      referredBy: referral.value,
-      password: password.value
+    else {
+      const data = {
+        name: name.value,
+        email: email.value,
+        walletAddress: wallet.value,
+        referredBy: referral.value,
+        password: password.value,
+        instagramUsername: instagram.value,
+        telegramUsername: telegram.value,
+        twitterUsername: twitter.value
+      }
+  
+      if (password.value === confirmPassword.value){
+        axios.post('http://localhost:4000/api/register', data)
+        .then((response) => {
+          console.log(response)
+          response.data.msg === "Email verification code has successfully been sent"?
+          navigate('/checkmail', { state: {msg: response.data.email} }): alert('Error registering, Try again.')
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+      }
+      else {
+        alert("Passwords do not match");
+      }
     }
 
-    console.log(data)
-
-    axios.post('http://localhost:4000/api/register', data)
-    .then((response) => {
-      console.log(response)
-      response.data.msg == "Email verification code has successfully been sent"?
-      navigate('/checkmail', { state: {msg: response.data.email} }): alert('error')
-    })
-    .catch(function (error) {
-      console.log(error);
-    });
  }
   return (
     <div className="login-div">
@@ -46,20 +63,6 @@ const AccountBody = () => {
         <div className="login-form create-account-form">
           <form ref={formData}>
             <p className="login-text">Create Your Account</p>
-            <div className="login-icons">
-              <span className="facebook">
-                <img src={facebook} alt="facebook logo" />
-                <p className="icon-text">FACEBOOK</p>
-              </span>
-              <span className="twitter">
-                <img src={twitter} alt="twitter logo" />
-                <p className="icon-text">TWITTER</p>
-              </span>
-              <span className="google">
-                <img src={google} alt="google logo" />
-                <p className="icon-text">GOOGLE</p>
-              </span>
-            </div>
 
             <div className="email-div register-email-div">
               <hr className="register-hr" />
@@ -87,11 +90,30 @@ const AccountBody = () => {
                 className="password"
                 placeholder="ERC-20 Wallet Address"
               />
+              <input
+                type="text"
+                name="instagram"
+                className="password"
+                placeholder="Instagram Username"
+              />
+              <input
+                type="text"
+                name="telegram"
+                className="password"
+                placeholder="Telegram Username"
+              />
+              <input
+                type="text"
+                name="twitter"
+                className="password"
+                placeholder="Twitter Username"
+                required
+              />
                <input
                 type="text"
                 name="referral"
                 className="password"
-                placeholder="Referral Code"
+                placeholder="Referral Code (optional)"
               />
             </div>
 
@@ -112,7 +134,7 @@ const AccountBody = () => {
 
             <div className="checkbox-div">
               <span className="checbox-div-span checkbbox-span-register">
-                <input type="checkbox" id="checkbox" className="checkbox register-checkbox" />
+                <input type="checkbox" id="checkbox" required name="terms" className="checkbox register-checkbox" />
                 <p className="i-agree-text">
                   I have read and accept the Terms of Service & Privacy Policy *
                 </p>
