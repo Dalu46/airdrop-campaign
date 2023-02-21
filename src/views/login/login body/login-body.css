@@ -134,8 +134,7 @@ input {
 .password-reset {
     height: 40px;
     border: none;
-    /* padding: 10px 17px; */
-    padding: 15px;
+    padding: 10px 17px;
     margin-bottom: 20px;
     width: 48%;
 }
@@ -579,7 +578,7 @@ input::-webkit-inner-spin-button {
     }
 
     .password-reset {
-        padding: 2px;
+        padding: 15px;
         font-size: 17px;
     }
 }
