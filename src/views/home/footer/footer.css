@@ -112,7 +112,8 @@
     }
     .social-media-div {
         margin: 0 auto;
-        padding-right: 10px;
+        width: 60%;
+        /* padding-right: 10px; */
     }
     .icons-div {
         margin-top: 0;
@@ -142,6 +143,9 @@
         margin-bottom: 15px;
     }
 
+    .imgs {
+        margin-left: 0;
+    }
   
 }
 
