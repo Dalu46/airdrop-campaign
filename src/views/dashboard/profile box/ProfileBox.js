@@ -1,41 +1,79 @@
-import React from "react";
+import React, {useRef, useEffect} from "react";
 import sheild from "../../../assets/images/shield 1.svg";
 import arrow from '../../../assets/icons/Vector.svg';
-
+import axios from 'axios';
 import './profile-box.css';
 
-const ProfileBox = () => {
-  const fullName = "Usman Danbab";
-  const emailAddress = "Usmandanbab75@gmail.com";
-  const phone = "08104856200";
-  const country = "Nigeria";
-  const eligibility = 'NOT ELIGIBLE FOR AIRDROP';
-  const numberOfTasksDone = '1 out of 4 tasks done';
+const ProfileBox = ({userInfo}) => {
+  const wallet = useRef();
+  const verifyEligibility = async ()=>{
+    const data = {
+      id: userInfo._id
+    }
+    axios.post('http://localhost:4000/api/verify-eligibility', data)
+    .then((response) => {
+      console.log(response)
+      if (response.data.msg == "eligible"){
+         alert("Congratulations, You are now eligible for an airdrop.");
+      }
+      else if(response.data.msg == "not eligible"){
+        alert("You are not eligible for an airdrop, Complete tasks and try again.")
+      }
+      else {
+        alert('Error Verifying Eligibility, Try again.');
+      }
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+
+  const updateWallet = async ()=> {
+    const data = {
+      id: userInfo._id,
+      newWallet: wallet.current.value
+    }
+    axios.post('http://localhost:4000/api/update-wallet-address', data)
+    .then((response) => {
+      console.log(response)
+      if (response.data.msg == "updated"){
+         wallet.current.value = data.newWallet;
+         alert("Wallet Address successfully updated");
+      }
+      else {
+        alert('Error updating wallet address, Try again.');
+      }
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
 
   return (
     <div className="profile-box-container">
       <div className="profile">
         <div className="profile-div">
           <p className="connect-text">Profile</p>
-          <p className="follow-us-text">See basic information about your account</p>
+          <p className="follow-us-text">Update basic information about your account</p>
         </div>
 
-        <div className="name-div-wrapper">
+        <div className="name-div-wrapper-x">
           <div className="name-div">
-            <p>Full name</p>
-            <button className="change-name">Change name</button>
+            <p>Wallet Address</p>
+            <button onClick={updateWallet} className="change-name">Change Wallet Address</button>
           </div>
           <div className="user-name">
             <input
+            ref={wallet}
               className="full-name"
               type="text"
               // disabled="true"
-              placeholder={`${fullName}`}
+              placeholder={`${userInfo.walletAddress}`}
             />
             <hr className="userName-hr" />
           </div>
 
-          <div className="name-div">
+          {/* <div className="name-div">
             <p className="full-name">Email Address</p>
             <button className="change-name">Change email</button>
           </div>
@@ -53,8 +91,8 @@ const ProfileBox = () => {
             <button className="change-name">
               Change password
             </button>
-          </div>
-          <div className="user-name">
+          </div> */}
+          {/* <div className="user-name">
             <input className="full-name" type="password" placeholder="password" />
             <hr className="userName-hr" />
           </div>
@@ -68,37 +106,8 @@ const ProfileBox = () => {
           <div className="user-name">
             <input className="full-name" type="number" placeholder={`${phone}`} />
             <hr className="userName-hr" />
-
-            <div className="name-div">
-              <p className="full-name country-text">Country</p>
-              <button className="change-name" type="number">
-                Change
-              </button>
-            </div>
-            <div className="user-name">
-              <input className="full-name" placeholder={`${country}`} />
-              <hr className="userName-hr" />
-            </div>
-
-            <div className="secure-account">
-              <span className="shield-box">
-                <img
-                  className="shield"
-                  src={sheild}
-                  alt="protect your account"
-                />
-              <p className="secure-account-text">Secure Your Account</p>
-              </span>
-              <div className="enable-authentication-div">
-                <p className="enable-authenctication-text">
-                  Two-factor authentication adds an extra layer security to your
-                  account. To login, in addition you’ll need to provide a 6
-                  digit code. <a href="#">learn more</a> 
-                </p>
-                <button className="enable-button">Enable</button>
-              </div>
-            </div>
-          </div>
+          
+          </div> */}
         </div>
         </div>
 
@@ -116,43 +125,54 @@ const ProfileBox = () => {
               </div>
 
               <div className="num-of-task-div">
-                <p className="eligibility-status">{eligibility}</p>
-                <p className="number-of-tasks">{numberOfTasksDone}</p>
+                {
+                  userInfo.eligibilityStatus?
+            <p className="eligibility-status-p">ELIGIBLE FOR AIRDROP</p>:
+            <p className="eligibility-status">NOT ELIGIBLE FOR AIRDROP</p>
+                }
+                
               </div>
             </div>
-
-            <div className="verify-eligibility-div">
-            <button className="verify-eligibility-btn">VERIFY ELIGIBILITY</button>
-            </div>
+            {
+          userInfo.twitterVerified == false || userInfo.telegramVerified === false || userInfo.instagramVerified == false?
+          <div className="verify-eligibility-div">
+          <button onClick={verifyEligibility} className="verify-eligibility-btn">VERIFY ELIGIBILITY</button>
+          </div>: <div className="mt"></div>
+        }
+            
 
             <div className="tasks-div">
             <p className="tasks">Tasks</p>
-            <hr className="tasks-hr" />
-
-            <div className="facebook-div">
-              <p className="facebook-text">Facebook</p>
-              <button className="facebook-button">Follow</button>
-            </div>
 
             <hr className="tasks-hr" />
 
             <div className="facebook-div">
               <p className="facebook-text">Twitter</p>
-              <button className="facebook-button">Follow</button>
+              {userInfo.twitterVerified?
+            <button style={{backgroundcolor: "green"}} className="facebook-button-p">Verified</button>:
+            <button style={{backgroundcolor: "red"}} className="facebook-button-n">not verfied</button>  
+            }
+              
             </div>
 
             <hr className="tasks-hr" />
 
             <div className="facebook-div">
-              <p className="facebook-text">Instgram</p>
-              <button className="instagram-button">Follow</button>
+              <p className="facebook-text">Instagram</p>
+              {userInfo.instagramVerified?
+              <button style={{backgroundcolor: "green"}} className="facebook-button-p">Verified</button>:
+              <button style={{backgroundcolor: "red"}} className="facebook-button-n">not verfied</button>
+}
             </div>
 
             <hr className="tasks-hr" />
 
             <div className="facebook-div">
               <p className="facebook-text">Telegram</p>
-              <button className="facebook-button">Join Channel</button>
+              {userInfo.telegramVerified?
+              <button style={{backgroundcolor: "green"}} className="facebook-button-p">Joined</button>:
+              <button style={{backgroundcolor: "red"}} className="facebook-button-n">not joined</button>
+}
             </div>
 
             </div>

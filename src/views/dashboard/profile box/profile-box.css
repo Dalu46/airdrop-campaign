@@ -20,7 +20,19 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}.name-div-wrapper-x {
+    background: #ffff;
+    height: 85px;
+    padding: 10px 15px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
+
+
 
 .name-div {
     display: flex;
@@ -173,6 +185,17 @@
     color: #C23F3F;
 }
 
+.eligibility-status-p {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    color: green;
+}
+
 
 /* come back here with paul to center button  */
 .verify-eligibility-div {
@@ -207,9 +230,18 @@
     margin-bottom: 10px;
     align-items: center;
 }
-.facebook-button {
+.facebook-button-p {
     padding: 4px 15px;
-    background: #0061FE;
+    background: green;
+    border-radius: 8px;
+    color: #ffff;
+    border: none;
+    margin-top: 5px;
+}
+
+.facebook-button-n {
+    padding: 4px 15px;
+    background: red;
     border-radius: 8px;
     color: #ffff;
     border: none;

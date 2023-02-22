@@ -16,7 +16,7 @@ const AccountBody = () => {
   const formData = useRef();
   const onSubmit = (event) => {
 
-    event.preventDefault();
+    event.preventDefault()
 
     const {name, email, wallet, terms, referral,password,confirmPassword, instagram, telegram, twitter} = formData.current;
     if (name.value === "" || email.value === "" ||wallet.value === "" ||

@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import image from "../../../assets/images/Image.png";
 import locationLogo from "../../../assets/icons/map-pin.svg";
 import illustration from "../../../assets/images/Illustration (1).svg";
@@ -15,10 +15,34 @@ import './dash-board-body.css';
 const DashBoardBody = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const user = location.state.userInfo;
+  const [user, setUser] = useState();
+  const userr = location.state.userInfo;
   console.log(user);
 
+  const getUser = async ()=>{
+    const data = {
+      id: userr._id
+    }
+    axios.post('http://localhost:4000/api/get-user', data)
+    .then((response) => {
+      console.log(response)
+      if (response.data.msg){
+         setUser(response.data.msg);
+      }
+      else {
+        alert("error retrieving user")
+      }
+    })
+    .catch(function (error) {
+      console.log(error);
+    });
+  }
+
+  useEffect(()=>{
+    getUser();
+  })
   return (
+    user?
     <div className="dash-board-body">
       <div className="user-div">
         <div className="user-profile">
@@ -52,10 +76,14 @@ const DashBoardBody = () => {
       </div>
 
       <div className="connect-with-socials">
-        <div className=" connect-text-box">
+        {
+          user.twitterVerified == false || user.telegramVerified === false || user.instagramVerified == false?
+          <div className=" connect-text-box">
           <p className="connect-text">Connect with our Socials</p>
           <p className="follow-us-text">Verify your account by following us on social media</p>
-        </div>
+        </div>: <div className="mt"></div>
+        }
+        
         <div className="connect-div">
           <div className="social-media-first-block">
 
@@ -74,8 +102,8 @@ const DashBoardBody = () => {
           <ProfileBox userInfo={user} />
         </div>
       </div>
-    </div>
-  );
+    </div>:""
+  )
 };
 
 export default DashBoardBody;

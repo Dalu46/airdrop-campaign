@@ -8,40 +8,40 @@ const SocialMedia = ({ socialMediaIcon, socialMediaName, userInfo }) => {
 
   const verifyUsername = ()=>{
     console.log(userInfo)
-    console.log("jjjjjjjjj");
+    
       const data = {
         username: username.current.value,
         id: userInfo._id
       }
     if (socialMediaName === "Twitter"){
-     
-      axios.get('http://localhost:4000/media/twitter/success/', data)
-      .then((response) => {
-        console.log(response)
-        if (response.data.msg === "twitter verification successfull"){
-           username.current.value = "";
-           alert("Twitter verification successful")
-        }
-        else {
-          alert('Error Verifying Twitter, Try again.')
-        }
+     alert('Twitter is under review');
+      // axios.post('http://localhost:4000/media/twitter/success/',{withCredentials: true}, data)
+      // .then((response) => {
+      //   console.log(response)
+      //   if (response.data.msg === "twitter verification successfull"){
+      //      username.current.value = "";
+      //      alert("Twitter verification successful")
+      //   }
+      //   else {
+      //     alert('Error Verifying Twitter, Try again.')
+      //   }
        
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+      // })
+      // .catch(function (error) {
+      //   console.log(error);
+      // });
     }
 
     else if (socialMediaName === "Instagram"){
-      axios.get('http://localhost:4000/media/instagram/verify', data)
+      axios.post('http://localhost:4000/media/instagram/verify', data)
       .then((response) => {
         console.log(response)
-        if (response.data.msg === "instagram verification successfull"){
+        if (response.data.msg == "followed"){
            username.current.value = "";
-           alert("Instagram verification successful")
+           alert("Instagram verification successful");
         }
         else {
-          alert('Error Verifying Instagram, Try again.')
+          alert('Error Verifying Instagram, Try again.');
         }
       })
       .catch(function (error) {
@@ -49,23 +49,23 @@ const SocialMedia = ({ socialMediaIcon, socialMediaName, userInfo }) => {
       });
     }
     else {
-      axios.get('http://localhost:4000/media/telegram/verify', data)
-      .then((response) => {
-        console.log(response)
-        if (response.data.msg === "telegram verification successfull"){
-           username.current.value = "";
-           alert("Telegram verification successful")
-        }
-        else {
-          alert('Error Verifying Telegram, Try again.')
-        }
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
+      alert('Telegram is under review');
+      // axios.get('http://localhost:4000/media/telegram/verify', data)
+      // .then((response) => {
+      //   console.log(response)
+      //   if (response.data.msg === "telegram verification successfull"){
+      //      username.current.value = "";
+      //      alert("Telegram verification successful")
+      //   }
+      //   else {
+      //     alert('Error Verifying Telegram, Try again.')
+      //   }
+      // })
+      // .catch(function (error) {
+      //   console.log(error);
+      // });
     }
   }
-  const verfied = "Not verrified";
   return (
     <div className="social-media">
       <div className="verification-div">
@@ -74,10 +74,6 @@ const SocialMedia = ({ socialMediaIcon, socialMediaName, userInfo }) => {
           src={socialMediaIcon}
           alt="verify with twitter"
         />
-        <span>
-          <p>Status: {verfied}</p>
-          <img src={shape} alt="your account has been verifed" />
-        </span>
       </div>
 
       <div className="social-media-name-div">
