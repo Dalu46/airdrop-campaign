@@ -19,7 +19,7 @@ const SuccessMailBody = () => {
     const data ={
       email: location.state.msg
     }
-    axios.post('http://localhost:4000/api/send-password-reset-link', data)
+    axios.post('https://manilla.herokuapp.com/api/send-password-reset-link', data)
     .then((response) => {
       console.log(response)
     alert('mail sent again');

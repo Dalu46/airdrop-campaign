@@ -23,7 +23,7 @@ const DashBoardBody = () => {
     const data = {
       id: userr._id
     }
-    axios.post('http://localhost:4000/api/get-user', data)
+    axios.post('https://manilla.herokuapp.com/api/get-user', data)
     .then((response) => {
       console.log(response)
       if (response.data.msg){
@@ -40,7 +40,7 @@ const DashBoardBody = () => {
 
   useEffect(()=>{
     getUser();
-  })
+  },[user])
   return (
     user?
     <div className="dash-board-body">

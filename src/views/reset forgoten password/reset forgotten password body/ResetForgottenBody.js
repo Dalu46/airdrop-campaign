@@ -19,10 +19,10 @@ const ResetForgotenBody = () => {
     const data = {
       userId: userId,
       token:token,
-      password: passwordRef.current.value
+      password: passwordRef.current.value || mpasswordRef.current.value
     }
 
-    axios.post('http://localhost:4000/api/reset-password', data)
+    axios.post('https://manilla.herokuapp.com/api/reset-password', data)
     .then((response) => {
       console.log(response)
     alert('Password has successfully been resetted');

@@ -33,7 +33,7 @@ const SocialMedia = ({ socialMediaIcon, socialMediaName, userInfo }) => {
     }
 
     else if (socialMediaName === "Instagram"){
-      axios.post('http://localhost:4000/media/instagram/verify', data)
+      axios.post('https://manilla.herokuapp.com/media/instagram/verify', data)
       .then((response) => {
         console.log(response)
         if (response.data.msg == "followed"){

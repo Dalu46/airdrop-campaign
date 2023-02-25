@@ -9,6 +9,7 @@ import axios from 'axios';
 
 const ForgotBody = () => {
   const emailRef = useRef();
+  const memailRef = useRef();
   const navigate = useNavigate();
   const sendResetLink = ()=>{
 
@@ -18,7 +19,27 @@ const ForgotBody = () => {
   
       console.log(data)
   
-      axios.post('http://localhost:4000/api/send-password-reset-link', data)
+      axios.post('https://manilla.herokuapp.com/api/send-password-reset-link', data)
+      .then((response) => {
+        console.log(response)
+      response.data.msg == "Password resetLink has successfully been sent"?
+      navigate('/successmail', {state: {msg:response.data.email}}): alert("error");
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+   
+  }
+
+  const msendResetLink = ()=>{
+
+    const data = {
+      email: memailRef.current.value
+    }
+  
+      console.log(data)
+  
+      axios.post('https://manilla.herokuapp.com/api/send-password-reset-link', data)
       .then((response) => {
         console.log(response)
       response.data.msg == "Password resetLink has successfully been sent"?
@@ -52,14 +73,13 @@ const ForgotBody = () => {
           </div>
 
           <div className="inputBox">
-            <input type="text" required="reauired" placeholder="Enter email" />
+            <input ref={memailRef} type="text" required="reauired" placeholder="Enter email" />
             <span>Active</span>
           </div>
 
           <div className="try-another-div">
-            <p className="try-another-text">Try another way</p>
             <span>
-              <p>Continue</p>
+            <button onClick={msendResetLink} className="continue">Continue</button>
               <img src={arrow} alt="continue" />
             </span>
           </div>

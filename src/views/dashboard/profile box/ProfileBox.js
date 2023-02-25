@@ -3,6 +3,7 @@ import sheild from "../../../assets/images/shield 1.svg";
 import arrow from '../../../assets/icons/Vector.svg';
 import axios from 'axios';
 import './profile-box.css';
+import { ethers } from "ethers";
 
 const ProfileBox = ({userInfo}) => {
   const wallet = useRef();
@@ -29,11 +30,16 @@ const ProfileBox = ({userInfo}) => {
   }
 
   const updateWallet = async ()=> {
+    const validity = await ethers.utils.isAddress(wallet.value);
+    if (!validity){
+      alert("Wallet Adress not found or invalid");
+    }
+    else {
     const data = {
       id: userInfo._id,
       newWallet: wallet.current.value
     }
-    axios.post('http://localhost:4000/api/update-wallet-address', data)
+    axios.post('https://manilla.herokuapp.com/api/update-wallet-address', data)
     .then((response) => {
       console.log(response)
       if (response.data.msg == "updated"){
@@ -47,6 +53,7 @@ const ProfileBox = ({userInfo}) => {
     .catch(function (error) {
       console.log(error);
     });
+  }
   }
 
   return (

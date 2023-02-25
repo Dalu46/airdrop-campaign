@@ -1,24 +1,23 @@
 import React from "react";
 import {useState, useRef, useEffect} from "react";
-import facebook from "../../../assets/icons/icons8-facebook-f (1).svg";
-import twitter from "../../../assets/icons/icons8-twitter (1).svg";
-import google from "../../../assets/icons/icons8-google.svg";
 import login from "../../../assets/images/Artwork 2/Register.svg";
 import fill1 from "../../../assets/images/Fill 1 (1).svg";
 import fill2 from "../../../assets/images/Fill 2.svg";
 import axios from 'axios';
 import "../../login/login body/login-body.css";
 import { useNavigate } from "react-router-dom";
+import { ethers } from "ethers";
 
 
 const AccountBody = () => {
   const navigate = useNavigate();
   const formData = useRef();
-  const onSubmit = (event) => {
-
+  const provider = ethers.getDefaultProvider("https://eth-goerli.g.alchemy.com/v2/8JR9l99kiuUF937GxDq2hfixoU-gl-9W");
+  const onSubmit = async (event) => {
     event.preventDefault()
-
     const {name, email, wallet, terms, referral,password,confirmPassword, instagram, telegram, twitter} = formData.current;
+    const validity = await ethers.utils.isAddress(wallet.value);
+    console.log(validity)
     if (name.value === "" || email.value === "" ||wallet.value === "" ||
     password.value === "" || confirmPassword.value === "" || instagram.value === "" || telegram.value === ""
      || twitter.value === ""){
@@ -26,6 +25,9 @@ const AccountBody = () => {
      }
      else if (terms.checked === false) {
       alert("Please accept our terms and conditions")
+     }
+     else if(!validity) {
+      alert("Wallet Address not found or invalid");
      }
 
     else {
@@ -44,8 +46,30 @@ const AccountBody = () => {
         axios.post('http://localhost:4000/api/register', data)
         .then((response) => {
           console.log(response)
-          response.data.msg === "Email verification code has successfully been sent"?
-          navigate('/checkmail', { state: {msg: response.data.email} }): alert('Error registering, Try again.')
+          if (response.msg.data === "twitter available"){
+            alert("This twitter account has already been registered");
+          }
+          if (response.msg.data === "instagram available"){
+            alert("This instagram account has already been registered");
+          }
+          if (response.msg.data === "telegram available"){
+            alert("This telegram account has already been registered");
+          }
+          if (response.msg.data === "invalid code"){
+            alert("Referral code not found or invalid");
+          }
+          if (response.msg.data === "Error sending mail verification code"){
+            alert('Error registering, Try again.')
+          }
+          if (response.msg.data === "Error updating referral bonus"){
+            alert('Error registering, Try again.')
+          }
+        
+          if (response.msg.data === "Email verification code has successfully been sent"){
+            navigate('/checkmail', { state: {msg: response.data.email} });
+          }
+          // response.data.msg === "Email verification code has successfully been sent"?
+          // navigate('/checkmail', { state: {msg: response.data.email} }): alert('Error registering, Try again.')
         })
         .catch(function (error) {
           console.log(error);

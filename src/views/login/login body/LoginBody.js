@@ -29,7 +29,7 @@ const LoginBody = () => {
         email: email.value,
         password: password.value
       }
-      axios.post('http://localhost:4000/api/login', data)
+      axios.post('https://manilla.herokuapp.com/api/login', data)
       .then((response) => {
         console.log(response)
         const data = response.data;

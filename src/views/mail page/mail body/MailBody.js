@@ -17,9 +17,27 @@ const MailBody = () => {
     console.log(location.state.msg)
      const data = {
        email: location.state.msg,
-       code: codeRef.current.value || codeMobileRef.current.value
+       code: codeRef.current.value
     }
-    axios.post('http://localhost:4000/api/verify-account', data)
+    axios.post('https://manilla.herokuapp.com/api/verify-account', data)
+    .then((response) => {
+      console.log(response)
+      alert('Your Email has successfully been verified, Login.');
+      navigate('/login')
+    })
+    .catch(function (error) {
+      console.log(error);
+      alert('Error verifying mail, please try again');
+    });
+  }
+
+  const verifyEmailMobile = ()=>{
+    console.log(location.state.msg)
+     const data = {
+       email: location.state.msg,
+       code: codeMobileRef.current.value
+    }
+    axios.post('https://manilla.herokuapp.com/api/verify-account', data)
     .then((response) => {
       console.log(response)
       alert('Your Email has successfully been verified, Login.');
@@ -80,7 +98,7 @@ const MailBody = () => {
             Didn’t get code? <span className="resend-text"> <button onClick={resendVerificationCode} className="continue">Resend</button></span>
           </p>
 
-          <button onClick={verifyEmail} className="continue">Verify Email</button>
+          <button onClick={verifyEmailMobile} className="continue">Verify Email</button>
         </div>
 
         {/* =================== finished ======================= */}
